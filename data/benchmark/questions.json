@@ -1,0 +1,142 @@
+[
+  {
+    "id": "q001",
+    "question": "Who founded Microsoft?",
+    "expected_answer": "Bill Gates and Paul Allen",
+    "type": "one-hop",
+    "required_entities": ["Microsoft", "Bill Gates", "Paul Allen"]
+  },
+  {
+    "id": "q002",
+    "question": "Where is OpenAI headquartered?",
+    "expected_answer": "San Francisco",
+    "type": "one-hop",
+    "required_entities": ["OpenAI", "San Francisco"]
+  },
+  {
+    "id": "q003",
+    "question": "Which company acquired Instagram?",
+    "expected_answer": "Meta",
+    "type": "one-hop",
+    "required_entities": ["Meta", "Instagram"]
+  },
+  {
+    "id": "q004",
+    "question": "What product did Anthropic create?",
+    "expected_answer": "Claude",
+    "type": "one-hop",
+    "required_entities": ["Anthropic", "Claude"]
+  },
+  {
+    "id": "q005",
+    "question": "Which company developed AlphaFold?",
+    "expected_answer": "DeepMind",
+    "type": "one-hop",
+    "required_entities": ["DeepMind", "AlphaFold"]
+  },
+  {
+    "id": "q006",
+    "question": "Which company invested in OpenAI and provides cloud infrastructure through Azure?",
+    "expected_answer": "Microsoft",
+    "type": "two-hop",
+    "required_entities": ["Microsoft", "OpenAI", "Azure"]
+  },
+  {
+    "id": "q007",
+    "question": "Which parent company owns the company that acquired DeepMind?",
+    "expected_answer": "Alphabet",
+    "type": "two-hop",
+    "required_entities": ["Alphabet", "Google", "DeepMind"]
+  },
+  {
+    "id": "q008",
+    "question": "Which Microsoft subsidiary is a software development platform headquartered in San Francisco?",
+    "expected_answer": "GitHub",
+    "type": "two-hop",
+    "required_entities": ["Microsoft", "GitHub", "San Francisco"]
+  },
+  {
+    "id": "q009",
+    "question": "Which AI company is connected to Tesla through Elon Musk?",
+    "expected_answer": "OpenAI",
+    "type": "two-hop",
+    "required_entities": ["OpenAI", "Tesla", "Elon Musk"]
+  },
+  {
+    "id": "q010",
+    "question": "Which company invested in Anthropic and provides cloud infrastructure through Amazon Web Services?",
+    "expected_answer": "Amazon",
+    "type": "two-hop",
+    "required_entities": ["Amazon", "Anthropic", "Amazon Web Services"]
+  },
+  {
+    "id": "q011",
+    "question": "Compare OpenAI and Anthropic: what AI assistant product did each create?",
+    "expected_answer": "OpenAI created ChatGPT, while Anthropic created Claude.",
+    "type": "comparison",
+    "required_entities": ["OpenAI", "ChatGPT", "Anthropic", "Claude"]
+  },
+  {
+    "id": "q012",
+    "question": "Compare Microsoft, Google, and Amazon: what cloud platform is associated with each?",
+    "expected_answer": "Microsoft has Azure, Google has Google Cloud, and Amazon has Amazon Web Services.",
+    "type": "comparison",
+    "required_entities": ["Microsoft", "Azure", "Google", "Google Cloud", "Amazon", "Amazon Web Services"]
+  },
+  {
+    "id": "q013",
+    "question": "Compare Meta's acquisitions of Instagram and WhatsApp: which company acquired both and in what years?",
+    "expected_answer": "Meta acquired Instagram in 2012 and WhatsApp in 2014.",
+    "type": "comparison",
+    "required_entities": ["Meta", "Instagram", "WhatsApp", "2012", "2014"]
+  },
+  {
+    "id": "q014",
+    "question": "Compare Google and DeepMind: which one acquired the other, and which one developed AlphaGo?",
+    "expected_answer": "Google acquired DeepMind, and DeepMind developed AlphaGo.",
+    "type": "comparison",
+    "required_entities": ["Google", "DeepMind", "AlphaGo"]
+  },
+  {
+    "id": "q015",
+    "question": "Compare Apple and Tesla: what major hardware products are associated with each?",
+    "expected_answer": "Apple is associated with iPhone, iPad, Mac, and Apple Vision Pro, while Tesla is associated with Model S, Model 3, Model X, and Model Y.",
+    "type": "comparison",
+    "required_entities": ["Apple", "Tesla", "iPhone", "Model S", "Model 3", "Model X", "Model Y"]
+  },
+  {
+    "id": "q016",
+    "question": "Did Google acquire WhatsApp?",
+    "expected_answer": "No. Meta acquired WhatsApp in 2014.",
+    "type": "adversarial",
+    "required_entities": ["Google", "Meta", "WhatsApp"]
+  },
+  {
+    "id": "q017",
+    "question": "Is GitHub a subsidiary of Google?",
+    "expected_answer": "No. GitHub is a subsidiary of Microsoft.",
+    "type": "adversarial",
+    "required_entities": ["GitHub", "Google", "Microsoft"]
+  },
+  {
+    "id": "q018",
+    "question": "Did Anthropic create ChatGPT?",
+    "expected_answer": "No. OpenAI created ChatGPT, while Anthropic created Claude.",
+    "type": "adversarial",
+    "required_entities": ["Anthropic", "ChatGPT", "OpenAI", "Claude"]
+  },
+  {
+    "id": "q019",
+    "question": "Was Tesla founded by Elon Musk?",
+    "expected_answer": "No. Tesla was founded by Martin Eberhard and Marc Tarpenning; Elon Musk invested later and became CEO.",
+    "type": "adversarial",
+    "required_entities": ["Tesla", "Elon Musk", "Martin Eberhard", "Marc Tarpenning"]
+  },
+  {
+    "id": "q020",
+    "question": "Does Amazon Web Services belong to Microsoft?",
+    "expected_answer": "No. Amazon Web Services was created by Amazon; Microsoft created Azure.",
+    "type": "adversarial",
+    "required_entities": ["Amazon Web Services", "Amazon", "Microsoft", "Azure"]
+  }
+]
