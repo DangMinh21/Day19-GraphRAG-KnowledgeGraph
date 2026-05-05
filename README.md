@@ -67,3 +67,13 @@ Generated artifacts:
 - `data/processed/chunks.json`
 - `data/processed/triples.json`
 - `outputs/cost_report.json`
+
+Phase 4 normalizes triples and builds a NetworkX graph summary:
+
+```bash
+python -m src.graph_store
+```
+
+Generated artifact:
+
+- `data/processed/normalized_triples.json`
