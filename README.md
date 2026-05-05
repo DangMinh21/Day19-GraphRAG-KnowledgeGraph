@@ -77,3 +77,15 @@ python -m src.graph_store
 Generated artifact:
 
 - `data/processed/normalized_triples.json`
+
+Phase 5 visualizes the knowledge graph:
+
+```bash
+python -m src.visualize
+```
+
+Use `--full` to render every node and edge. The default renders a focused graph that is easier to inspect in the lab report.
+
+Generated artifact:
+
+- `outputs/knowledge_graph.png`

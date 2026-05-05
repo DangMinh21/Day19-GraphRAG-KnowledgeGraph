@@ -27,6 +27,7 @@ CHUNKS_PATH = PROCESSED_DIR / "chunks.json"
 TRIPLES_PATH = PROCESSED_DIR / "triples.json"
 NORMALIZED_TRIPLES_PATH = PROCESSED_DIR / "normalized_triples.json"
 COST_REPORT_PATH = OUTPUTS_DIR / "cost_report.json"
+KNOWLEDGE_GRAPH_IMAGE_PATH = OUTPUTS_DIR / "knowledge_graph.png"
 
 
 def load_environment() -> None:
@@ -48,4 +49,3 @@ MODEL_PRICES_USD_PER_1M_TOKENS = {
     "gpt-4.1-mini": {"input": 0.40, "output": 1.60},
     "gpt-4o-mini": {"input": 0.15, "output": 0.60},
 }
-
