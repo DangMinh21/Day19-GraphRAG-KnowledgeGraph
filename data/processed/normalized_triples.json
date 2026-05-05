@@ -336,6 +336,13 @@
     "confidence": 0.95
   },
   {
+    "subject": "Instagram",
+    "relation": "ACQUIRED_IN",
+    "object": "2012",
+    "source_chunk_id": "chunk_015",
+    "confidence": 0.96
+  },
+  {
     "subject": "LinkedIn",
     "relation": "HEADQUARTERED_IN",
     "object": "Sunnyvale, California",
@@ -761,5 +768,12 @@
     "object": "Meta",
     "source_chunk_id": "chunk_016",
     "confidence": 0.95
+  },
+  {
+    "subject": "WhatsApp",
+    "relation": "ACQUIRED_IN",
+    "object": "2014",
+    "source_chunk_id": "chunk_016",
+    "confidence": 0.96
   }
 ]

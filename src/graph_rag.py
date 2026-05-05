@@ -252,6 +252,16 @@ def answer_yes_no_question(
         evidence = f" {subject} is a subsidiary of {true_owner}." if true_owner else ""
         if true_child:
             evidence += f" {object_} is parent company of {true_child}."
+        creator = next(
+            (
+                triple.subject
+                for triple in triples
+                if triple.object == subject and triple.relation == "CREATED_PRODUCT"
+            ),
+            None,
+        )
+        if creator:
+            evidence += f" {subject} was created by {creator}."
         return f"No.{evidence}".strip()
 
     direct_match = any(

@@ -105,3 +105,13 @@ python -m src.graph_rag "Which AI company is connected to Tesla through Elon Mus
 ```
 
 Add `--openai` to use OpenAI for final answer generation from graph triples.
+
+Phase 8 evaluates Flat RAG against GraphRAG on 20 benchmark questions:
+
+```bash
+python -m src.evaluate
+```
+
+Generated artifact:
+
+- `outputs/benchmark_results.csv`

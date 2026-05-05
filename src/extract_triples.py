@@ -31,6 +31,7 @@ ALLOWED_RELATIONS = {
     "CREATED_PRODUCT",
     "ACQUIRED",
     "ACQUIRED_BY",
+    "ACQUIRED_IN",
     "INVESTED_IN",
     "BACKED_BY",
     "PARTNERED_WITH",
@@ -174,10 +175,12 @@ def curated_triples_for_chunk(chunk: CorpusChunk) -> list[Triple]:
         ],
         "chunk_015": [
             ("Meta", "ACQUIRED", "Instagram", 0.98),
+            ("Instagram", "ACQUIRED_IN", "2012", 0.96),
             ("Instagram", "ACQUIRED_BY", "Meta", 0.95),
         ],
         "chunk_016": [
             ("Meta", "ACQUIRED", "WhatsApp", 0.98),
+            ("WhatsApp", "ACQUIRED_IN", "2014", 0.96),
             ("WhatsApp", "ACQUIRED_BY", "Meta", 0.95),
         ],
         "chunk_017": [

@@ -23,11 +23,13 @@ BENCHMARK_DIR = DATA_DIR / "benchmark"
 OUTPUTS_DIR = PROJECT_ROOT / "outputs"
 
 RAW_CORPUS_PATH = RAW_DIR / "tech_company_corpus.md"
+BENCHMARK_QUESTIONS_PATH = BENCHMARK_DIR / "questions.json"
 CHUNKS_PATH = PROCESSED_DIR / "chunks.json"
 TRIPLES_PATH = PROCESSED_DIR / "triples.json"
 NORMALIZED_TRIPLES_PATH = PROCESSED_DIR / "normalized_triples.json"
 COST_REPORT_PATH = OUTPUTS_DIR / "cost_report.json"
 KNOWLEDGE_GRAPH_IMAGE_PATH = OUTPUTS_DIR / "knowledge_graph.png"
+BENCHMARK_RESULTS_PATH = OUTPUTS_DIR / "benchmark_results.csv"
 
 
 def load_environment() -> None:

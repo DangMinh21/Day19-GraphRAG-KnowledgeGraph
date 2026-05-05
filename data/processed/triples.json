@@ -400,6 +400,13 @@
   },
   {
     "subject": "Instagram",
+    "relation": "ACQUIRED_IN",
+    "object": "2012",
+    "source_chunk_id": "chunk_015",
+    "confidence": 0.96
+  },
+  {
+    "subject": "Instagram",
     "relation": "ACQUIRED_BY",
     "object": "Meta",
     "source_chunk_id": "chunk_015",
@@ -411,6 +418,13 @@
     "object": "WhatsApp",
     "source_chunk_id": "chunk_016",
     "confidence": 0.98
+  },
+  {
+    "subject": "WhatsApp",
+    "relation": "ACQUIRED_IN",
+    "object": "2014",
+    "source_chunk_id": "chunk_016",
+    "confidence": 0.96
   },
   {
     "subject": "WhatsApp",
