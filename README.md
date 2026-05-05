@@ -115,3 +115,4 @@ python -m src.evaluate
 Generated artifact:
 
 - `outputs/benchmark_results.csv`
+- `outputs/benchmark_report.md`

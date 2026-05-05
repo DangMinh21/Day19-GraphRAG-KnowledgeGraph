@@ -19,6 +19,7 @@ venv/
 outputs/*.png
 outputs/*.csv
 outputs/*.json
+outputs/*.md
 
 # Keep output directory in git with .gitkeep
 !outputs/.gitkeep

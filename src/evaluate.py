@@ -10,7 +10,7 @@ from pathlib import Path
 
 import pandas as pd
 
-from src.config import BENCHMARK_QUESTIONS_PATH, BENCHMARK_RESULTS_PATH
+from src.config import BENCHMARK_QUESTIONS_PATH, BENCHMARK_REPORT_PATH, BENCHMARK_RESULTS_PATH
 from src.flat_rag import FlatRAG
 from src.graph_rag import GraphRAG
 
@@ -138,6 +138,113 @@ def save_results(df: pd.DataFrame, path: Path = BENCHMARK_RESULTS_PATH) -> None:
     df.to_csv(path, index=False)
 
 
+def markdown_escape(text: object) -> str:
+    """Escape table-sensitive characters for Markdown cells."""
+
+    clean = str(text).replace("\n", "<br>")
+    return clean.replace("|", "\\|")
+
+
+def status_icon(value: bool) -> str:
+    """Return a compact status label for Markdown tables."""
+
+    return "OK" if bool(value) else "MISS"
+
+
+def build_markdown_report(df: pd.DataFrame) -> str:
+    """Build a human-readable benchmark report in Markdown."""
+
+    total = len(df)
+    flat_correct = int(df["flat_rag_correct"].sum())
+    graph_correct = int(df["graph_rag_correct"].sum())
+    improvements = df[(~df["flat_rag_correct"]) & (df["graph_rag_correct"])]
+
+    lines: list[str] = [
+        "# GraphRAG Benchmark Report",
+        "",
+        "## Summary",
+        "",
+        f"- Total questions: {total}",
+        f"- Flat RAG accuracy: {flat_correct}/{total} = {flat_correct / total:.1%}",
+        f"- GraphRAG accuracy: {graph_correct}/{total} = {graph_correct / total:.1%}",
+        f"- GraphRAG-only wins: {len(improvements)}",
+        "",
+        "## Accuracy By Question Type",
+        "",
+        "| Question Type | Flat RAG | GraphRAG |",
+        "|---|---:|---:|",
+    ]
+
+    by_type = df.groupby("question_type")[["flat_rag_correct", "graph_rag_correct"]].mean()
+    for question_type, row in by_type.iterrows():
+        lines.append(
+            f"| {markdown_escape(question_type)} | {row['flat_rag_correct']:.0%} | {row['graph_rag_correct']:.0%} |"
+        )
+
+    lines.extend(
+        [
+            "",
+            "## Question Results",
+            "",
+            "| ID | Type | Question | Expected | Flat | Graph |",
+            "|---|---|---|---|---|---|",
+        ]
+    )
+
+    for _, row in df.iterrows():
+        lines.append(
+            "| "
+            f"{markdown_escape(row['question_id'])} | "
+            f"{markdown_escape(row['question_type'])} | "
+            f"{markdown_escape(row['question'])} | "
+            f"{markdown_escape(row['expected_answer'])} | "
+            f"{status_icon(row['flat_rag_correct'])} | "
+            f"{status_icon(row['graph_rag_correct'])} |"
+        )
+
+    lines.extend(
+        [
+            "",
+            "## Where GraphRAG Improves",
+            "",
+        ]
+    )
+
+    if improvements.empty:
+        lines.append("No GraphRAG-only wins were found in this run.")
+    else:
+        for _, row in improvements.iterrows():
+            lines.extend(
+                [
+                    f"### {row['question_id']}: {row['question']}",
+                    "",
+                    f"- Expected: {row['expected_answer']}",
+                    f"- Flat RAG: {row['flat_rag_answer']}",
+                    f"- GraphRAG: {row['graph_rag_answer']}",
+                    "",
+                ]
+            )
+
+    lines.extend(
+        [
+            "## Notes",
+            "",
+            "- `OK` and `MISS` are produced by transparent string-based scoring rules in `src/evaluate.py`.",
+            "- CSV remains the raw machine-readable output; this Markdown file is intended for review and lab reporting.",
+            "",
+        ]
+    )
+
+    return "\n".join(lines)
+
+
+def save_markdown_report(df: pd.DataFrame, path: Path = BENCHMARK_REPORT_PATH) -> None:
+    """Save a readable Markdown benchmark report."""
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(build_markdown_report(df), encoding="utf-8")
+
+
 def print_summary(df: pd.DataFrame) -> None:
     """Print compact benchmark accuracy summary."""
 
@@ -146,6 +253,7 @@ def print_summary(df: pd.DataFrame) -> None:
     graph_correct = int(df["graph_rag_correct"].sum())
 
     print(f"Saved benchmark results to {BENCHMARK_RESULTS_PATH}")
+    print(f"Saved benchmark report to {BENCHMARK_REPORT_PATH}")
     print(f"Flat RAG accuracy: {flat_correct}/{total} = {flat_correct / total:.1%}")
     print(f"GraphRAG accuracy: {graph_correct}/{total} = {graph_correct / total:.1%}")
     print("\nAccuracy by question type:")
@@ -167,6 +275,7 @@ def main() -> None:
     args = parse_args()
     df = evaluate(use_openai=args.openai)
     save_results(df)
+    save_markdown_report(df)
     print_summary(df)
 
 

@@ -30,6 +30,7 @@ NORMALIZED_TRIPLES_PATH = PROCESSED_DIR / "normalized_triples.json"
 COST_REPORT_PATH = OUTPUTS_DIR / "cost_report.json"
 KNOWLEDGE_GRAPH_IMAGE_PATH = OUTPUTS_DIR / "knowledge_graph.png"
 BENCHMARK_RESULTS_PATH = OUTPUTS_DIR / "benchmark_results.csv"
+BENCHMARK_REPORT_PATH = OUTPUTS_DIR / "benchmark_report.md"
 
 
 def load_environment() -> None:
