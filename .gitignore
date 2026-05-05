@@ -1,0 +1,22 @@
+# macOS
+.DS_Store
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Environment variables and local secrets
+.env
+
+# Generated lab outputs
+outputs/*.png
+outputs/*.csv
+outputs/*.json
+
+# Keep output directory in git with .gitkeep
+!outputs/.gitkeep

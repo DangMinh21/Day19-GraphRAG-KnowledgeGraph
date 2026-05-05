@@ -1,0 +1,8 @@
+networkx>=3.3
+matplotlib>=3.8
+openai>=1.40
+pandas>=2.2
+python-dotenv>=1.0
+scikit-learn>=1.5
+wikipedia-api>=0.6
+neo4j>=5.20

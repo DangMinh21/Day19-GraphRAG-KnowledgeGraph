@@ -1,2 +1,53 @@
-# Day19-GraphRAG-KnowledgeGraph
-Lab of day 19 (Graph RAG &amp; Knowledge Graph) of "AI in Action" at VinUni &amp; Vingroup
+# Day19 GraphRAG Knowledge Graph
+
+Lab Day 19 for building a small end-to-end GraphRAG system over a curated technology company corpus.
+
+## Goal
+
+This project follows `docs/implementation_spec.md` and focuses on a simple, reproducible Python pipeline:
+
+- Curate a small Markdown corpus about technology companies.
+- Extract subject-relation-object triples.
+- Normalize triples and build a NetworkX knowledge graph.
+- Visualize the graph with Matplotlib.
+- Compare a simple Flat RAG baseline with GraphRAG on benchmark questions.
+- Track indexing cost and runtime.
+
+## Project Structure
+
+```text
+.
+├── data/
+│   ├── raw/          # Curated and optional crawled corpus files
+│   ├── processed/    # Chunks, extracted triples, normalized triples
+│   └── benchmark/    # Evaluation questions
+├── docs/             # Lab guide and implementation spec
+├── outputs/          # Generated graph images, benchmark CSV, cost report
+├── src/              # Python implementation
+├── .env.example
+├── requirements.txt
+└── README.md
+```
+
+## Setup
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+cp .env.example .env
+```
+
+Then add your real `OPENAI_API_KEY` to `.env` if you want to run LLM extraction and answer generation.
+
+## Planned Commands
+
+The implementation will be added phase by phase. The final workflow will look like:
+
+```bash
+python -m src.main build
+python -m src.main visualize
+python -m src.main evaluate
+```
+
+Generated files under `outputs/` are ignored by Git except for `.gitkeep`.
