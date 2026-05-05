@@ -51,3 +51,19 @@ python -m src.main evaluate
 ```
 
 Generated files under `outputs/` are ignored by Git except for `.gitkeep`.
+
+## Current Extraction Command
+
+Phase 3 includes corpus chunking and raw triple extraction:
+
+```bash
+python -m src.extract_triples --offline
+```
+
+Use `--offline` for deterministic lab data. Without `--offline`, the script will call OpenAI when `OPENAI_API_KEY` is set.
+
+Generated artifacts:
+
+- `data/processed/chunks.json`
+- `data/processed/triples.json`
+- `outputs/cost_report.json`
