@@ -1,6 +1,7 @@
 # Day 19 GraphRAG Knowledge Graph
 
 **Học viên: Đặng Văn Minh**
+
 **MSHV: 2A202600027**
 
 Đây là bài nộp Lab Day 19: xây dựng một hệ thống GraphRAG end-to-end trên một corpus nhỏ về các công ty công nghệ.
