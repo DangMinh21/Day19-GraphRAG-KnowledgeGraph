@@ -89,3 +89,11 @@ Use `--full` to render every node and edge. The default renders a focused graph 
 Generated artifact:
 
 - `outputs/knowledge_graph.png`
+
+Phase 6 runs a simple Flat RAG baseline with TF-IDF retrieval:
+
+```bash
+python -m src.flat_rag "Which company acquired Instagram?"
+```
+
+Add `--openai` to use OpenAI for answer generation when `OPENAI_API_KEY` is configured.
