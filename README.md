@@ -42,15 +42,19 @@ Then add your real `OPENAI_API_KEY` to `.env` if you want to run LLM extraction 
 
 ## Planned Commands
 
-The implementation will be added phase by phase. The final workflow will look like:
+The complete submission pipeline can be regenerated with one command:
 
 ```bash
-python -m src.main build
-python -m src.main visualize
-python -m src.main evaluate
+python main.py
 ```
 
-Generated files under `outputs/` are ignored by Git except for `.gitkeep`.
+This runs deterministic offline extraction, graph construction, visualization, Flat RAG vs GraphRAG evaluation, and status reporting. Use OpenAI instead of the offline deterministic path when `OPENAI_API_KEY` is configured:
+
+```bash
+python main.py --openai
+```
+
+Generated files under `outputs/` are ignored by Git except for `.gitkeep`. Force-add selected outputs when you want to include them in a submitted commit.
 
 ## Current Extraction Command
 

@@ -31,6 +31,8 @@ COST_REPORT_PATH = OUTPUTS_DIR / "cost_report.json"
 KNOWLEDGE_GRAPH_IMAGE_PATH = OUTPUTS_DIR / "knowledge_graph.png"
 BENCHMARK_RESULTS_PATH = OUTPUTS_DIR / "benchmark_results.csv"
 BENCHMARK_REPORT_PATH = OUTPUTS_DIR / "benchmark_report.md"
+SUBMISSION_STATUS_PATH = OUTPUTS_DIR / "submission_status.md"
+SUBMISSION_STATUS_JSON_PATH = OUTPUTS_DIR / "submission_status.json"
 
 
 def load_environment() -> None:
