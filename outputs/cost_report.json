@@ -1,0 +1,12 @@
+{
+  "num_chunks": 30,
+  "num_raw_triples": 125,
+  "num_normalized_triples": 124,
+  "extraction_duration_seconds": 94.815,
+  "input_tokens": 5426,
+  "output_tokens": 5174,
+  "total_tokens": 10600,
+  "estimated_cost_usd": 0.003918,
+  "extraction_model": "gpt-4o-mini",
+  "extraction_mode": "openai"
+}

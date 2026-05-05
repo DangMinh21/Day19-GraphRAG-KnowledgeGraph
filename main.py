@@ -20,6 +20,9 @@ from src.config import (
     COST_REPORT_PATH,
     KNOWLEDGE_GRAPH_IMAGE_PATH,
     NORMALIZED_TRIPLES_PATH,
+    OPENAI_API_KEY,
+    OPENAI_ANSWER_MODEL,
+    OPENAI_EXTRACTION_MODEL,
     RAW_CORPUS_PATH,
     SUBMISSION_STATUS_JSON_PATH,
     SUBMISSION_STATUS_PATH,
@@ -214,9 +217,18 @@ def run_pipeline(use_openai: bool = False, full_graph: bool = False) -> int:
 
     total_start = time.perf_counter()
     mode = "OpenAI API" if use_openai else "offline deterministic"
+    if use_openai and not OPENAI_API_KEY:
+        print("ERROR: --openai was requested, but OPENAI_API_KEY is not configured.")
+        print("Create .env from .env.example and set OPENAI_API_KEY before running the real LLM experiment.")
+        return 1
+
     print("\nDay 19 GraphRAG End-to-End Pipeline")
     print(f"Run mode: {mode}")
     print(f"Graph visualization: {'full graph' if full_graph else 'focused graph'}")
+    if use_openai:
+        print(f"Extraction model: {OPENAI_EXTRACTION_MODEL}")
+        print(f"Answer model: {OPENAI_ANSWER_MODEL}")
+        print("Cost note: this run calls OpenAI for triple extraction and for benchmark answer generation.")
     print()
 
     step_results: list[StepResult] = []

@@ -1,779 +1,870 @@
 [
   {
+    "subject": "AlphaFold",
+    "relation": "CREATED_PRODUCT",
+    "object": "protein structure prediction",
+    "source_chunk_id": "chunk_012",
+    "confidence": 1.0
+  },
+  {
     "subject": "Alphabet",
     "relation": "PARENT_COMPANY_OF",
     "object": "Google",
     "source_chunk_id": "chunk_010",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Amazon",
     "relation": "ACQUIRED",
     "object": "Twitch",
     "source_chunk_id": "chunk_023",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Amazon",
     "relation": "ACQUIRED",
     "object": "Whole Foods Market",
     "source_chunk_id": "chunk_023",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Amazon",
     "relation": "CREATED_PRODUCT",
     "object": "Amazon Web Services",
     "source_chunk_id": "chunk_023",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Amazon",
     "relation": "FOUNDED_BY",
     "object": "Jeff Bezos",
     "source_chunk_id": "chunk_022",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Amazon",
     "relation": "FOUNDED_IN",
     "object": "1994",
     "source_chunk_id": "chunk_022",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Amazon",
     "relation": "HEADQUARTERED_IN",
     "object": "Seattle, Washington",
     "source_chunk_id": "chunk_022",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Amazon",
     "relation": "INVESTED_IN",
     "object": "Anthropic",
     "source_chunk_id": "chunk_021",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Amazon",
     "relation": "PARTNERED_WITH",
     "object": "NVIDIA",
     "source_chunk_id": "chunk_029",
-    "confidence": 0.96
+    "confidence": 1.0
+  },
+  {
+    "subject": "Amazon",
+    "relation": "PROVIDES_INFRASTRUCTURE_FOR",
+    "object": "AI workloads on Amazon Web Services",
+    "source_chunk_id": "chunk_029",
+    "confidence": 1.0
   },
   {
     "subject": "Amazon",
     "relation": "PROVIDES_INFRASTRUCTURE_FOR",
     "object": "Anthropic",
     "source_chunk_id": "chunk_021",
-    "confidence": 0.96
-  },
-  {
-    "subject": "Amazon Web Services",
-    "relation": "PROVIDES_INFRASTRUCTURE_FOR",
-    "object": "AI workloads",
-    "source_chunk_id": "chunk_029",
-    "confidence": 0.86
+    "confidence": 1.0
   },
   {
     "subject": "Anthropic",
     "relation": "CREATED_PRODUCT",
     "object": "Claude",
     "source_chunk_id": "chunk_021",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Anthropic",
     "relation": "FOUNDED_BY",
     "object": "Daniela Amodei",
     "source_chunk_id": "chunk_020",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Anthropic",
     "relation": "FOUNDED_BY",
     "object": "Dario Amodei",
     "source_chunk_id": "chunk_020",
-    "confidence": 0.98
+    "confidence": 1.0
+  },
+  {
+    "subject": "Anthropic",
+    "relation": "FOUNDED_BY",
+    "object": "other former OpenAI employees",
+    "source_chunk_id": "chunk_020",
+    "confidence": 1.0
   },
   {
     "subject": "Anthropic",
     "relation": "FOUNDED_IN",
     "object": "2021",
     "source_chunk_id": "chunk_020",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Anthropic",
     "relation": "HEADQUARTERED_IN",
     "object": "San Francisco",
     "source_chunk_id": "chunk_020",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Apple",
     "relation": "ACQUIRED",
     "object": "Beats Electronics",
     "source_chunk_id": "chunk_019",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Apple",
     "relation": "CREATED_PRODUCT",
     "object": "Apple Vision Pro",
     "source_chunk_id": "chunk_019",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Apple",
     "relation": "CREATED_PRODUCT",
     "object": "Mac",
     "source_chunk_id": "chunk_019",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Apple",
     "relation": "CREATED_PRODUCT",
     "object": "iPad",
     "source_chunk_id": "chunk_019",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Apple",
     "relation": "CREATED_PRODUCT",
     "object": "iPhone",
     "source_chunk_id": "chunk_019",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Apple",
     "relation": "FOUNDED_BY",
     "object": "Ronald Wayne",
     "source_chunk_id": "chunk_018",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Apple",
     "relation": "FOUNDED_BY",
     "object": "Steve Jobs",
     "source_chunk_id": "chunk_018",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Apple",
     "relation": "FOUNDED_BY",
     "object": "Steve Wozniak",
     "source_chunk_id": "chunk_018",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Apple",
     "relation": "FOUNDED_IN",
     "object": "1976",
     "source_chunk_id": "chunk_018",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Apple",
     "relation": "HEADQUARTERED_IN",
     "object": "Cupertino, California",
     "source_chunk_id": "chunk_018",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Azure",
-    "relation": "PROVIDES_INFRASTRUCTURE_FOR",
-    "object": "AI workloads",
-    "source_chunk_id": "chunk_029",
-    "confidence": 0.86
-  },
-  {
-    "subject": "DeepMind",
-    "relation": "ACQUIRED_BY",
-    "object": "Google",
-    "source_chunk_id": "chunk_011",
-    "confidence": 0.95
-  },
-  {
-    "subject": "DeepMind",
     "relation": "CREATED_PRODUCT",
+    "object": "cloud computing platform",
+    "source_chunk_id": "chunk_002",
+    "confidence": 1.0
+  },
+  {
+    "subject": "Azure",
+    "relation": "SUBSIDIARY_OF",
+    "object": "Microsoft",
+    "source_chunk_id": "chunk_002",
+    "confidence": 1.0
+  },
+  {
+    "subject": "Beats Electronics",
+    "relation": "ACQUIRED_IN",
+    "object": "2014",
+    "source_chunk_id": "chunk_019",
+    "confidence": 1.0
+  },
+  {
+    "subject": "DeepMind",
+    "relation": "ACQUIRED_IN",
+    "object": "2014",
+    "source_chunk_id": "chunk_011",
+    "confidence": 1.0
+  },
+  {
+    "subject": "DeepMind",
+    "relation": "DEVELOPED_BY",
     "object": "AlphaFold",
     "source_chunk_id": "chunk_012",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "DeepMind",
-    "relation": "CREATED_PRODUCT",
+    "relation": "DEVELOPED_BY",
     "object": "AlphaGo",
     "source_chunk_id": "chunk_012",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "DeepMind",
     "relation": "HEADQUARTERED_IN",
     "object": "London",
     "source_chunk_id": "chunk_011",
-    "confidence": 0.95
+    "confidence": 1.0
+  },
+  {
+    "subject": "Elon Musk",
+    "relation": "FOUNDED_BY",
+    "object": "OpenAI",
+    "source_chunk_id": "chunk_028",
+    "confidence": 1.0
   },
   {
     "subject": "Elon Musk",
     "relation": "INVESTED_IN",
     "object": "Tesla",
     "source_chunk_id": "chunk_027",
-    "confidence": 0.95
+    "confidence": 1.0
+  },
+  {
+    "subject": "Elon Musk",
+    "relation": "LED_BY",
+    "object": "Tesla",
+    "source_chunk_id": "chunk_027",
+    "confidence": 1.0
+  },
+  {
+    "subject": "GPUs",
+    "relation": "PROVIDES_INFRASTRUCTURE_FOR",
+    "object": "artificial intelligence workloads",
+    "source_chunk_id": "chunk_025",
+    "confidence": 1.0
+  },
+  {
+    "subject": "GitHub",
+    "relation": "ACQUIRED_IN",
+    "object": "2018",
+    "source_chunk_id": "chunk_006",
+    "confidence": 1.0
   },
   {
     "subject": "GitHub",
     "relation": "HEADQUARTERED_IN",
     "object": "San Francisco",
     "source_chunk_id": "chunk_007",
-    "confidence": 0.95
+    "confidence": 1.0
   },
   {
     "subject": "GitHub",
     "relation": "SUBSIDIARY_OF",
     "object": "Microsoft",
     "source_chunk_id": "chunk_007",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Google",
     "relation": "ACQUIRED",
     "object": "DeepMind",
     "source_chunk_id": "chunk_011",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Google",
     "relation": "CREATED_PRODUCT",
     "object": "Android",
     "source_chunk_id": "chunk_010",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Google",
     "relation": "CREATED_PRODUCT",
     "object": "Gmail",
     "source_chunk_id": "chunk_010",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Google",
     "relation": "CREATED_PRODUCT",
     "object": "Google Cloud",
     "source_chunk_id": "chunk_010",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Google",
     "relation": "CREATED_PRODUCT",
     "object": "Google Search",
     "source_chunk_id": "chunk_010",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Google",
     "relation": "FOUNDED_BY",
     "object": "Larry Page",
     "source_chunk_id": "chunk_009",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Google",
     "relation": "FOUNDED_BY",
     "object": "Sergey Brin",
     "source_chunk_id": "chunk_009",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Google",
     "relation": "FOUNDED_IN",
     "object": "1998",
     "source_chunk_id": "chunk_009",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Google",
     "relation": "HEADQUARTERED_IN",
     "object": "Mountain View, California",
     "source_chunk_id": "chunk_009",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Google",
     "relation": "PARTNERED_WITH",
     "object": "NVIDIA",
     "source_chunk_id": "chunk_030",
-    "confidence": 0.96
-  },
-  {
-    "subject": "Google",
-    "relation": "SUBSIDIARY_OF",
-    "object": "Alphabet",
-    "source_chunk_id": "chunk_010",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Google Cloud",
     "relation": "COMPETES_WITH",
     "object": "Amazon Web Services",
     "source_chunk_id": "chunk_013",
-    "confidence": 0.9
+    "confidence": 1.0
   },
   {
     "subject": "Google Cloud",
     "relation": "COMPETES_WITH",
     "object": "Azure",
     "source_chunk_id": "chunk_013",
-    "confidence": 0.9
+    "confidence": 1.0
+  },
+  {
+    "subject": "Google Cloud",
+    "relation": "DEVELOPED_BY",
+    "object": "Google",
+    "source_chunk_id": "chunk_013",
+    "confidence": 1.0
+  },
+  {
+    "subject": "Greg Brockman",
+    "relation": "FOUNDED_BY",
+    "object": "OpenAI",
+    "source_chunk_id": "chunk_004",
+    "confidence": 1.0
+  },
+  {
+    "subject": "Greg Brockman",
+    "relation": "LED_BY",
+    "object": "OpenAI",
+    "source_chunk_id": "chunk_004",
+    "confidence": 1.0
   },
   {
     "subject": "Instagram",
-    "relation": "ACQUIRED_BY",
-    "object": "Meta",
+    "relation": "CREATED_PRODUCT",
+    "object": "social media product focused on photo and video sharing",
     "source_chunk_id": "chunk_015",
-    "confidence": 0.95
+    "confidence": 1.0
   },
   {
-    "subject": "Instagram",
+    "subject": "LinkedIn",
     "relation": "ACQUIRED_IN",
-    "object": "2012",
-    "source_chunk_id": "chunk_015",
-    "confidence": 0.96
+    "object": "2016",
+    "source_chunk_id": "chunk_006",
+    "confidence": 1.0
   },
   {
     "subject": "LinkedIn",
     "relation": "HEADQUARTERED_IN",
     "object": "Sunnyvale, California",
     "source_chunk_id": "chunk_008",
-    "confidence": 0.95
+    "confidence": 1.0
   },
   {
     "subject": "LinkedIn",
     "relation": "SUBSIDIARY_OF",
     "object": "Microsoft",
     "source_chunk_id": "chunk_008",
-    "confidence": 0.98
+    "confidence": 1.0
+  },
+  {
+    "subject": "Mark Zuckerberg",
+    "relation": "LED_BY",
+    "object": "Meta",
+    "source_chunk_id": "chunk_017",
+    "confidence": 1.0
+  },
+  {
+    "subject": "Meta",
+    "relation": "ACQUIRED",
+    "object": "Facebook",
+    "source_chunk_id": "chunk_014",
+    "confidence": 1.0
   },
   {
     "subject": "Meta",
     "relation": "ACQUIRED",
     "object": "Instagram",
     "source_chunk_id": "chunk_015",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Meta",
     "relation": "ACQUIRED",
     "object": "WhatsApp",
     "source_chunk_id": "chunk_016",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Meta",
     "relation": "CREATED_PRODUCT",
     "object": "Facebook",
     "source_chunk_id": "chunk_017",
-    "confidence": 0.95
+    "confidence": 1.0
+  },
+  {
+    "subject": "Meta",
+    "relation": "DEVELOPED_BY",
+    "object": "AI systems for social media and advertising",
+    "source_chunk_id": "chunk_017",
+    "confidence": 1.0
   },
   {
     "subject": "Meta",
     "relation": "FOUNDED_BY",
     "object": "Andrew McCollum",
     "source_chunk_id": "chunk_014",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Meta",
     "relation": "FOUNDED_BY",
     "object": "Chris Hughes",
     "source_chunk_id": "chunk_014",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Meta",
     "relation": "FOUNDED_BY",
     "object": "Dustin Moskovitz",
     "source_chunk_id": "chunk_014",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Meta",
     "relation": "FOUNDED_BY",
     "object": "Eduardo Saverin",
     "source_chunk_id": "chunk_014",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Meta",
     "relation": "FOUNDED_BY",
     "object": "Mark Zuckerberg",
     "source_chunk_id": "chunk_014",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Meta",
     "relation": "FOUNDED_IN",
     "object": "2004",
     "source_chunk_id": "chunk_014",
-    "confidence": 0.95
+    "confidence": 1.0
   },
   {
     "subject": "Meta",
     "relation": "HEADQUARTERED_IN",
     "object": "Menlo Park, California",
     "source_chunk_id": "chunk_014",
-    "confidence": 0.98
-  },
-  {
-    "subject": "Meta",
-    "relation": "LED_BY",
-    "object": "Mark Zuckerberg",
-    "source_chunk_id": "chunk_017",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Microsoft",
     "relation": "ACQUIRED",
     "object": "GitHub",
     "source_chunk_id": "chunk_006",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Microsoft",
     "relation": "ACQUIRED",
     "object": "LinkedIn",
     "source_chunk_id": "chunk_006",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Microsoft",
     "relation": "CREATED_PRODUCT",
     "object": "Azure",
     "source_chunk_id": "chunk_006",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Microsoft",
     "relation": "CREATED_PRODUCT",
     "object": "Microsoft Office",
     "source_chunk_id": "chunk_006",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Microsoft",
     "relation": "CREATED_PRODUCT",
     "object": "Windows",
     "source_chunk_id": "chunk_006",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Microsoft",
     "relation": "FOUNDED_BY",
     "object": "Bill Gates",
     "source_chunk_id": "chunk_005",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Microsoft",
     "relation": "FOUNDED_BY",
     "object": "Paul Allen",
     "source_chunk_id": "chunk_005",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Microsoft",
     "relation": "FOUNDED_IN",
     "object": "1975",
     "source_chunk_id": "chunk_005",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Microsoft",
     "relation": "HEADQUARTERED_IN",
     "object": "Redmond, Washington",
     "source_chunk_id": "chunk_005",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Microsoft",
     "relation": "INVESTED_IN",
     "object": "OpenAI",
     "source_chunk_id": "chunk_002",
-    "confidence": 0.98
-  },
-  {
-    "subject": "Microsoft",
-    "relation": "PARENT_COMPANY_OF",
-    "object": "GitHub",
-    "source_chunk_id": "chunk_007",
-    "confidence": 0.98
-  },
-  {
-    "subject": "Microsoft",
-    "relation": "PARENT_COMPANY_OF",
-    "object": "LinkedIn",
-    "source_chunk_id": "chunk_008",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Microsoft",
     "relation": "PARTNERED_WITH",
     "object": "NVIDIA",
     "source_chunk_id": "chunk_029",
-    "confidence": 0.96
+    "confidence": 1.0
+  },
+  {
+    "subject": "Microsoft",
+    "relation": "PROVIDES_INFRASTRUCTURE_FOR",
+    "object": "AI workloads on Azure",
+    "source_chunk_id": "chunk_029",
+    "confidence": 1.0
   },
   {
     "subject": "Microsoft",
     "relation": "PROVIDES_INFRASTRUCTURE_FOR",
     "object": "OpenAI",
     "source_chunk_id": "chunk_002",
-    "confidence": 0.96
+    "confidence": 1.0
+  },
+  {
+    "subject": "NVIDIA",
+    "relation": "ACQUIRED",
+    "object": "semiconductor company",
+    "source_chunk_id": "chunk_024",
+    "confidence": 1.0
   },
   {
     "subject": "NVIDIA",
     "relation": "CREATED_PRODUCT",
     "object": "CUDA",
     "source_chunk_id": "chunk_025",
-    "confidence": 0.98
+    "confidence": 1.0
+  },
+  {
+    "subject": "NVIDIA",
+    "relation": "DEVELOPED_BY",
+    "object": "GPUs",
+    "source_chunk_id": "chunk_025",
+    "confidence": 1.0
   },
   {
     "subject": "NVIDIA",
     "relation": "FOUNDED_BY",
     "object": "Chris Malachowsky",
     "source_chunk_id": "chunk_024",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "NVIDIA",
     "relation": "FOUNDED_BY",
     "object": "Curtis Priem",
     "source_chunk_id": "chunk_024",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "NVIDIA",
     "relation": "FOUNDED_BY",
     "object": "Jensen Huang",
     "source_chunk_id": "chunk_024",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "NVIDIA",
     "relation": "FOUNDED_IN",
     "object": "1993",
     "source_chunk_id": "chunk_024",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "NVIDIA",
     "relation": "HEADQUARTERED_IN",
     "object": "Santa Clara, California",
     "source_chunk_id": "chunk_024",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "NVIDIA",
     "relation": "PARTNERED_WITH",
     "object": "Amazon",
     "source_chunk_id": "chunk_025",
-    "confidence": 0.92
+    "confidence": 1.0
   },
   {
     "subject": "NVIDIA",
     "relation": "PARTNERED_WITH",
     "object": "Amazon Web Services",
     "source_chunk_id": "chunk_030",
-    "confidence": 0.92
+    "confidence": 1.0
   },
   {
     "subject": "NVIDIA",
     "relation": "PARTNERED_WITH",
     "object": "Azure",
     "source_chunk_id": "chunk_030",
-    "confidence": 0.92
+    "confidence": 1.0
   },
   {
     "subject": "NVIDIA",
     "relation": "PARTNERED_WITH",
     "object": "Google",
     "source_chunk_id": "chunk_025",
-    "confidence": 0.92
+    "confidence": 1.0
   },
   {
     "subject": "NVIDIA",
     "relation": "PARTNERED_WITH",
     "object": "Google Cloud",
     "source_chunk_id": "chunk_030",
-    "confidence": 0.92
+    "confidence": 1.0
   },
   {
     "subject": "NVIDIA",
     "relation": "PARTNERED_WITH",
     "object": "Microsoft",
     "source_chunk_id": "chunk_025",
-    "confidence": 0.92
+    "confidence": 1.0
   },
   {
     "subject": "OpenAI",
     "relation": "CREATED_PRODUCT",
     "object": "ChatGPT",
     "source_chunk_id": "chunk_003",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "OpenAI",
-    "relation": "CREATED_PRODUCT",
+    "relation": "DEVELOPED_BY",
     "object": "GPT-4",
     "source_chunk_id": "chunk_003",
-    "confidence": 0.95
+    "confidence": 1.0
   },
   {
     "subject": "OpenAI",
     "relation": "FOUNDED_BY",
     "object": "Elon Musk",
     "source_chunk_id": "chunk_001",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "OpenAI",
     "relation": "FOUNDED_BY",
     "object": "Greg Brockman",
     "source_chunk_id": "chunk_001",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "OpenAI",
     "relation": "FOUNDED_BY",
     "object": "Ilya Sutskever",
     "source_chunk_id": "chunk_001",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "OpenAI",
     "relation": "FOUNDED_BY",
     "object": "John Schulman",
     "source_chunk_id": "chunk_001",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "OpenAI",
     "relation": "FOUNDED_BY",
     "object": "Sam Altman",
     "source_chunk_id": "chunk_001",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "OpenAI",
     "relation": "FOUNDED_BY",
     "object": "Wojciech Zaremba",
     "source_chunk_id": "chunk_001",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "OpenAI",
     "relation": "FOUNDED_IN",
     "object": "2015",
     "source_chunk_id": "chunk_001",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "OpenAI",
     "relation": "HEADQUARTERED_IN",
     "object": "San Francisco",
     "source_chunk_id": "chunk_001",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
-    "subject": "OpenAI",
+    "subject": "Sam Altman",
     "relation": "LED_BY",
-    "object": "Greg Brockman",
+    "object": "OpenAI",
     "source_chunk_id": "chunk_004",
-    "confidence": 0.86
-  },
-  {
-    "subject": "OpenAI",
-    "relation": "LED_BY",
-    "object": "Sam Altman",
-    "source_chunk_id": "chunk_004",
-    "confidence": 0.95
+    "confidence": 1.0
   },
   {
     "subject": "Tesla",
     "relation": "CREATED_PRODUCT",
     "object": "Model 3",
     "source_chunk_id": "chunk_027",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Tesla",
     "relation": "CREATED_PRODUCT",
     "object": "Model S",
     "source_chunk_id": "chunk_027",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Tesla",
     "relation": "CREATED_PRODUCT",
     "object": "Model X",
     "source_chunk_id": "chunk_027",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Tesla",
     "relation": "CREATED_PRODUCT",
     "object": "Model Y",
     "source_chunk_id": "chunk_027",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Tesla",
     "relation": "FOUNDED_BY",
     "object": "Marc Tarpenning",
     "source_chunk_id": "chunk_026",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Tesla",
     "relation": "FOUNDED_BY",
     "object": "Martin Eberhard",
     "source_chunk_id": "chunk_026",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
     "subject": "Tesla",
     "relation": "FOUNDED_IN",
     "object": "2003",
     "source_chunk_id": "chunk_026",
-    "confidence": 0.98
+    "confidence": 1.0
+  },
+  {
+    "subject": "Tesla",
+    "relation": "FOUNDED_IN",
+    "object": "2004",
+    "source_chunk_id": "chunk_027",
+    "confidence": 1.0
   },
   {
     "subject": "Tesla",
     "relation": "HEADQUARTERED_IN",
     "object": "Austin, Texas",
     "source_chunk_id": "chunk_026",
-    "confidence": 0.98
+    "confidence": 1.0
   },
   {
-    "subject": "Tesla",
-    "relation": "LED_BY",
-    "object": "Elon Musk",
-    "source_chunk_id": "chunk_027",
-    "confidence": 0.98
-  },
-  {
-    "subject": "WhatsApp",
-    "relation": "ACQUIRED_BY",
-    "object": "Meta",
-    "source_chunk_id": "chunk_016",
-    "confidence": 0.95
-  },
-  {
-    "subject": "WhatsApp",
+    "subject": "Twitch",
     "relation": "ACQUIRED_IN",
     "object": "2014",
+    "source_chunk_id": "chunk_023",
+    "confidence": 1.0
+  },
+  {
+    "subject": "WhatsApp",
+    "relation": "CREATED_PRODUCT",
+    "object": "messaging product",
     "source_chunk_id": "chunk_016",
-    "confidence": 0.96
+    "confidence": 1.0
+  },
+  {
+    "subject": "Whole Foods Market",
+    "relation": "ACQUIRED_IN",
+    "object": "2017",
+    "source_chunk_id": "chunk_023",
+    "confidence": 1.0
   }
 ]

@@ -1,0 +1,420 @@
+question_id,question,question_type,expected_answer,flat_rag_answer,graph_rag_answer,flat_rag_correct,graph_rag_correct,flat_rag_context,graph_rag_context_triples,notes
+q001,Who founded Microsoft?,one-hop,Bill Gates and Paul Allen,Microsoft was founded in 1975 by Bill Gates and Paul Allen.,"Microsoft was founded by Bill Gates and Paul Allen. The key supporting relationships are ""Microsoft --FOUNDED_BY--> Bill Gates"" and ""Microsoft --FOUNDED_BY--> Paul Allen.""",True,True,"chunk_005 | score=0.281 | Microsoft is a technology company headquartered in Redmond, Washington. Microsoft was founded in 1975 by Bill Gates and Paul Allen.
+chunk_006 | score=0.257 | Microsoft created Azure, Windows, and Microsoft Office. Microsoft acquired LinkedIn in 2016 and acquired GitHub in 2018.
+chunk_002 | score=0.181 | Microsoft invested in OpenAI and provides cloud infrastructure for OpenAI through Azure. Azure is Microsoft's cloud computing platform.
+chunk_007 | score=0.102 | GitHub is a software development platform headquartered in San Francisco. GitHub is a subsidiary of Microsoft.","Azure --SUBSIDIARY_OF--> Microsoft (chunk_002, confidence=1.00, distance=0)
+GitHub --SUBSIDIARY_OF--> Microsoft (chunk_007, confidence=1.00, distance=0)
+LinkedIn --SUBSIDIARY_OF--> Microsoft (chunk_008, confidence=1.00, distance=0)
+Microsoft --FOUNDED_IN--> 1975 (chunk_005, confidence=1.00, distance=0)
+Microsoft --PROVIDES_INFRASTRUCTURE_FOR--> AI workloads on Azure (chunk_029, confidence=1.00, distance=0)
+Microsoft --CREATED_PRODUCT--> Azure (chunk_006, confidence=1.00, distance=0)
+Microsoft --FOUNDED_BY--> Bill Gates (chunk_005, confidence=1.00, distance=0)
+Microsoft --ACQUIRED--> GitHub (chunk_006, confidence=1.00, distance=0)
+Microsoft --ACQUIRED--> LinkedIn (chunk_006, confidence=1.00, distance=0)
+Microsoft --CREATED_PRODUCT--> Microsoft Office (chunk_006, confidence=1.00, distance=0)
+Microsoft --PARTNERED_WITH--> NVIDIA (chunk_029, confidence=1.00, distance=0)
+Microsoft --INVESTED_IN--> OpenAI (chunk_002, confidence=1.00, distance=0)
+Microsoft --PROVIDES_INFRASTRUCTURE_FOR--> OpenAI (chunk_002, confidence=1.00, distance=0)
+Microsoft --FOUNDED_BY--> Paul Allen (chunk_005, confidence=1.00, distance=0)
+Microsoft --HEADQUARTERED_IN--> Redmond, Washington (chunk_005, confidence=1.00, distance=0)
+Microsoft --CREATED_PRODUCT--> Windows (chunk_006, confidence=1.00, distance=0)
+NVIDIA --PARTNERED_WITH--> Microsoft (chunk_025, confidence=1.00, distance=0)
+Amazon --PARTNERED_WITH--> NVIDIA (chunk_029, confidence=1.00, distance=1)",Flat: Expected answer phrase appears in answer. Graph: Expected answer phrase appears in answer.
+q002,Where is OpenAI headquartered?,one-hop,San Francisco,OpenAI is headquartered in San Francisco.,"OpenAI is headquartered in San Francisco. This is supported by the relationship ""OpenAI --HEADQUARTERED_IN--> San Francisco.""",True,True,"chunk_004 | score=0.332 | Sam Altman is the chief executive officer of OpenAI. Greg Brockman is a co-founder of OpenAI and has served as president of OpenAI.
+chunk_002 | score=0.233 | Microsoft invested in OpenAI and provides cloud infrastructure for OpenAI through Azure. Azure is Microsoft's cloud computing platform.
+chunk_001 | score=0.231 | OpenAI is an artificial intelligence company headquartered in San Francisco. OpenAI was founded in 2015 by Sam Altman, Greg Brockman, Ilya Sutskever, John Schulman, Wojciech Zaremba, and Elon Musk.
+chunk_028 | score=0.219 | Elon Musk co-founded OpenAI and later led Tesla. This connects OpenAI and Tesla through a shared person entity.","Elon Musk --FOUNDED_BY--> OpenAI (chunk_028, confidence=1.00, distance=0)
+Greg Brockman --FOUNDED_BY--> OpenAI (chunk_004, confidence=1.00, distance=0)
+Greg Brockman --LED_BY--> OpenAI (chunk_004, confidence=1.00, distance=0)
+Microsoft --INVESTED_IN--> OpenAI (chunk_002, confidence=1.00, distance=0)
+Microsoft --PROVIDES_INFRASTRUCTURE_FOR--> OpenAI (chunk_002, confidence=1.00, distance=0)
+OpenAI --FOUNDED_IN--> 2015 (chunk_001, confidence=1.00, distance=0)
+OpenAI --CREATED_PRODUCT--> ChatGPT (chunk_003, confidence=1.00, distance=0)
+OpenAI --FOUNDED_BY--> Elon Musk (chunk_001, confidence=1.00, distance=0)
+OpenAI --DEVELOPED_BY--> GPT-4 (chunk_003, confidence=1.00, distance=0)
+OpenAI --FOUNDED_BY--> Greg Brockman (chunk_001, confidence=1.00, distance=0)
+OpenAI --FOUNDED_BY--> Ilya Sutskever (chunk_001, confidence=1.00, distance=0)
+OpenAI --FOUNDED_BY--> John Schulman (chunk_001, confidence=1.00, distance=0)
+OpenAI --FOUNDED_BY--> Sam Altman (chunk_001, confidence=1.00, distance=0)
+OpenAI --HEADQUARTERED_IN--> San Francisco (chunk_001, confidence=1.00, distance=0)
+OpenAI --FOUNDED_BY--> Wojciech Zaremba (chunk_001, confidence=1.00, distance=0)
+Sam Altman --LED_BY--> OpenAI (chunk_004, confidence=1.00, distance=0)
+Anthropic --HEADQUARTERED_IN--> San Francisco (chunk_020, confidence=1.00, distance=1)
+Azure --SUBSIDIARY_OF--> Microsoft (chunk_002, confidence=1.00, distance=1)",Flat: Expected answer phrase appears in answer. Graph: Expected answer phrase appears in answer.
+q003,Which company acquired Instagram?,one-hop,Meta,Meta acquired Instagram in 2012.,"The company that acquired Instagram is Meta. This is supported by the relationship ""Meta --ACQUIRED--> Instagram.""",True,True,"chunk_015 | score=0.440 | Meta acquired Instagram in 2012. Instagram is a social media product focused on photo and video sharing.
+chunk_006 | score=0.112 | Microsoft created Azure, Windows, and Microsoft Office. Microsoft acquired LinkedIn in 2016 and acquired GitHub in 2018.
+chunk_011 | score=0.105 | Google acquired DeepMind in 2014. DeepMind is an artificial intelligence research company headquartered in London.
+chunk_023 | score=0.105 | Amazon created Amazon Web Services as a cloud computing platform. Amazon acquired Twitch in 2014 and acquired Whole Foods Market in 2017.","Instagram --CREATED_PRODUCT--> social media product focused on photo and video sharing (chunk_015, confidence=1.00, distance=0)
+Meta --ACQUIRED--> Instagram (chunk_015, confidence=1.00, distance=0)
+Mark Zuckerberg --LED_BY--> Meta (chunk_017, confidence=1.00, distance=1)
+Meta --FOUNDED_IN--> 2004 (chunk_014, confidence=1.00, distance=1)
+Meta --DEVELOPED_BY--> AI systems for social media and advertising (chunk_017, confidence=1.00, distance=1)
+Meta --FOUNDED_BY--> Andrew McCollum (chunk_014, confidence=1.00, distance=1)
+Meta --FOUNDED_BY--> Chris Hughes (chunk_014, confidence=1.00, distance=1)
+Meta --FOUNDED_BY--> Dustin Moskovitz (chunk_014, confidence=1.00, distance=1)
+Meta --FOUNDED_BY--> Eduardo Saverin (chunk_014, confidence=1.00, distance=1)
+Meta --ACQUIRED--> Facebook (chunk_014, confidence=1.00, distance=1)
+Meta --CREATED_PRODUCT--> Facebook (chunk_017, confidence=1.00, distance=1)
+Meta --FOUNDED_BY--> Mark Zuckerberg (chunk_014, confidence=1.00, distance=1)
+Meta --HEADQUARTERED_IN--> Menlo Park, California (chunk_014, confidence=1.00, distance=1)
+Meta --ACQUIRED--> WhatsApp (chunk_016, confidence=1.00, distance=1)",Flat: Expected answer phrase appears in answer. Graph: Expected answer phrase appears in answer.
+q004,What product did Anthropic create?,one-hop,Claude,Anthropic created Claude as an AI assistant product.,"Anthropic created the product Claude. This is supported by the relationship ""Anthropic --CREATED_PRODUCT--> Claude.""",True,True,"chunk_021 | score=0.470 | Anthropic created Claude as an AI assistant product. Amazon invested in Anthropic and provides cloud infrastructure for Anthropic through Amazon Web Services.
+chunk_020 | score=0.265 | Anthropic is an artificial intelligence company headquartered in San Francisco. Anthropic was founded in 2021 by Dario Amodei, Daniela Amodei, and other former OpenAI employees.
+chunk_016 | score=0.102 | Meta acquired WhatsApp in 2014. WhatsApp is a messaging product used for consumer communication.
+chunk_012 | score=0.099 | DeepMind developed AlphaGo and AlphaFold. AlphaFold is a product and research system for protein structure prediction.","Amazon --INVESTED_IN--> Anthropic (chunk_021, confidence=1.00, distance=0)
+Amazon --PROVIDES_INFRASTRUCTURE_FOR--> Anthropic (chunk_021, confidence=1.00, distance=0)
+Anthropic --FOUNDED_IN--> 2021 (chunk_020, confidence=1.00, distance=0)
+Anthropic --CREATED_PRODUCT--> Claude (chunk_021, confidence=1.00, distance=0)
+Anthropic --FOUNDED_BY--> Daniela Amodei (chunk_020, confidence=1.00, distance=0)
+Anthropic --FOUNDED_BY--> Dario Amodei (chunk_020, confidence=1.00, distance=0)
+Anthropic --HEADQUARTERED_IN--> San Francisco (chunk_020, confidence=1.00, distance=0)
+Anthropic --FOUNDED_BY--> other former OpenAI employees (chunk_020, confidence=1.00, distance=0)
+Amazon --FOUNDED_IN--> 1994 (chunk_022, confidence=1.00, distance=1)
+Amazon --PROVIDES_INFRASTRUCTURE_FOR--> AI workloads on Amazon Web Services (chunk_029, confidence=1.00, distance=1)
+Amazon --CREATED_PRODUCT--> Amazon Web Services (chunk_023, confidence=1.00, distance=1)
+Amazon --FOUNDED_BY--> Jeff Bezos (chunk_022, confidence=1.00, distance=1)
+Amazon --PARTNERED_WITH--> NVIDIA (chunk_029, confidence=1.00, distance=1)
+Amazon --HEADQUARTERED_IN--> Seattle, Washington (chunk_022, confidence=1.00, distance=1)
+Amazon --ACQUIRED--> Twitch (chunk_023, confidence=1.00, distance=1)
+Amazon --ACQUIRED--> Whole Foods Market (chunk_023, confidence=1.00, distance=1)
+GitHub --HEADQUARTERED_IN--> San Francisco (chunk_007, confidence=1.00, distance=1)
+NVIDIA --PARTNERED_WITH--> Amazon (chunk_025, confidence=1.00, distance=1)",Flat: Expected answer phrase appears in answer. Graph: Expected answer phrase appears in answer.
+q005,Which company developed AlphaFold?,one-hop,DeepMind,DeepMind developed AlphaFold.,"The company that developed AlphaFold is DeepMind. This is supported by the relationship ""DeepMind --DEVELOPED_BY--> AlphaFold.""",True,True,"chunk_012 | score=0.431 | DeepMind developed AlphaGo and AlphaFold. AlphaFold is a product and research system for protein structure prediction.
+chunk_003 | score=0.096 | OpenAI created ChatGPT as a conversational AI product. OpenAI also developed GPT-4 as a large language model for reasoning and generation.
+chunk_013 | score=0.096 | Google Cloud is a cloud computing platform developed by Google. Google Cloud competes with Microsoft Azure and Amazon Web Services.
+chunk_011 | score=0.047 | Google acquired DeepMind in 2014. DeepMind is an artificial intelligence research company headquartered in London.","AlphaFold --CREATED_PRODUCT--> protein structure prediction (chunk_012, confidence=1.00, distance=0)
+DeepMind --DEVELOPED_BY--> AlphaFold (chunk_012, confidence=1.00, distance=0)
+DeepMind --ACQUIRED_IN--> 2014 (chunk_011, confidence=1.00, distance=1)
+DeepMind --DEVELOPED_BY--> AlphaGo (chunk_012, confidence=1.00, distance=1)
+DeepMind --HEADQUARTERED_IN--> London (chunk_011, confidence=1.00, distance=1)
+Google --ACQUIRED--> DeepMind (chunk_011, confidence=1.00, distance=1)",Flat: Expected answer phrase appears in answer. Graph: Expected answer phrase appears in answer.
+q006,Which company invested in OpenAI and provides cloud infrastructure through Azure?,two-hop,Microsoft,Microsoft invested in OpenAI and provides cloud infrastructure through Azure.,The company that invested in OpenAI and provides cloud infrastructure through Azure is Microsoft. This is supported by the relationships: Microsoft --INVESTED_IN--> OpenAI and Microsoft --CREATED_PRODUCT--> Azure.,True,True,"chunk_002 | score=0.677 | Microsoft invested in OpenAI and provides cloud infrastructure for OpenAI through Azure. Azure is Microsoft's cloud computing platform.
+chunk_021 | score=0.277 | Anthropic created Claude as an AI assistant product. Amazon invested in Anthropic and provides cloud infrastructure for Anthropic through Amazon Web Services.
+chunk_030 | score=0.141 | Google partners with NVIDIA for AI infrastructure and GPU acceleration on Google Cloud. These cloud partnerships connect NVIDIA with Microsoft Azure, Google Cloud, and Amazon Web Services.
+chunk_013 | score=0.126 | Google Cloud is a cloud computing platform developed by Google. Google Cloud competes with Microsoft Azure and Amazon Web Services.","Azure --SUBSIDIARY_OF--> Microsoft (chunk_002, confidence=1.00, distance=0)
+Azure --CREATED_PRODUCT--> cloud computing platform (chunk_002, confidence=1.00, distance=0)
+Elon Musk --FOUNDED_BY--> OpenAI (chunk_028, confidence=1.00, distance=0)
+Google Cloud --COMPETES_WITH--> Azure (chunk_013, confidence=1.00, distance=0)
+Greg Brockman --FOUNDED_BY--> OpenAI (chunk_004, confidence=1.00, distance=0)
+Greg Brockman --LED_BY--> OpenAI (chunk_004, confidence=1.00, distance=0)
+Microsoft --CREATED_PRODUCT--> Azure (chunk_006, confidence=1.00, distance=0)
+Microsoft --INVESTED_IN--> OpenAI (chunk_002, confidence=1.00, distance=0)
+Microsoft --PROVIDES_INFRASTRUCTURE_FOR--> OpenAI (chunk_002, confidence=1.00, distance=0)
+NVIDIA --PARTNERED_WITH--> Azure (chunk_030, confidence=1.00, distance=0)
+OpenAI --FOUNDED_IN--> 2015 (chunk_001, confidence=1.00, distance=0)
+OpenAI --CREATED_PRODUCT--> ChatGPT (chunk_003, confidence=1.00, distance=0)
+OpenAI --FOUNDED_BY--> Elon Musk (chunk_001, confidence=1.00, distance=0)
+OpenAI --DEVELOPED_BY--> GPT-4 (chunk_003, confidence=1.00, distance=0)
+OpenAI --FOUNDED_BY--> Greg Brockman (chunk_001, confidence=1.00, distance=0)
+OpenAI --FOUNDED_BY--> Ilya Sutskever (chunk_001, confidence=1.00, distance=0)
+OpenAI --FOUNDED_BY--> John Schulman (chunk_001, confidence=1.00, distance=0)
+OpenAI --FOUNDED_BY--> Sam Altman (chunk_001, confidence=1.00, distance=0)",Flat: Expected answer phrase appears in answer. Graph: Expected answer phrase appears in answer.
+q007,Which parent company owns the company that acquired DeepMind?,two-hop,Alphabet,The parent company that owns the company that acquired DeepMind is Alphabet.,"The parent company that owns the company that acquired DeepMind is Alphabet. This is supported by the relationship where Alphabet is the parent company of Google, and Google acquired DeepMind.",True,True,"chunk_011 | score=0.376 | Google acquired DeepMind in 2014. DeepMind is an artificial intelligence research company headquartered in London.
+chunk_010 | score=0.227 | Alphabet is the parent company of Google. Google created Google Search, Gmail, Android, and Google Cloud.
+chunk_006 | score=0.080 | Microsoft created Azure, Windows, and Microsoft Office. Microsoft acquired LinkedIn in 2016 and acquired GitHub in 2018.
+chunk_012 | score=0.078 | DeepMind developed AlphaGo and AlphaFold. AlphaFold is a product and research system for protein structure prediction.","DeepMind --ACQUIRED_IN--> 2014 (chunk_011, confidence=1.00, distance=0)
+DeepMind --DEVELOPED_BY--> AlphaFold (chunk_012, confidence=1.00, distance=0)
+DeepMind --DEVELOPED_BY--> AlphaGo (chunk_012, confidence=1.00, distance=0)
+DeepMind --HEADQUARTERED_IN--> London (chunk_011, confidence=1.00, distance=0)
+Google --ACQUIRED--> DeepMind (chunk_011, confidence=1.00, distance=0)
+AlphaFold --CREATED_PRODUCT--> protein structure prediction (chunk_012, confidence=1.00, distance=1)
+Alphabet --PARENT_COMPANY_OF--> Google (chunk_010, confidence=1.00, distance=1)
+Beats Electronics --ACQUIRED_IN--> 2014 (chunk_019, confidence=1.00, distance=1)
+Google --FOUNDED_IN--> 1998 (chunk_009, confidence=1.00, distance=1)
+Google --CREATED_PRODUCT--> Android (chunk_010, confidence=1.00, distance=1)
+Google --CREATED_PRODUCT--> Gmail (chunk_010, confidence=1.00, distance=1)
+Google --CREATED_PRODUCT--> Google Cloud (chunk_010, confidence=1.00, distance=1)
+Google --CREATED_PRODUCT--> Google Search (chunk_010, confidence=1.00, distance=1)
+Google --FOUNDED_BY--> Larry Page (chunk_009, confidence=1.00, distance=1)
+Google --HEADQUARTERED_IN--> Mountain View, California (chunk_009, confidence=1.00, distance=1)
+Google --PARTNERED_WITH--> NVIDIA (chunk_030, confidence=1.00, distance=1)
+Google --FOUNDED_BY--> Sergey Brin (chunk_009, confidence=1.00, distance=1)
+Google Cloud --DEVELOPED_BY--> Google (chunk_013, confidence=1.00, distance=1)",Flat: Expected answer phrase appears in answer. Graph: Expected answer phrase appears in answer.
+q008,Which Microsoft subsidiary is a software development platform headquartered in San Francisco?,two-hop,GitHub,The Microsoft subsidiary that is a software development platform headquartered in San Francisco is GitHub.,The Microsoft subsidiary that is a software development platform headquartered in San Francisco is GitHub. This is supported by the relationships indicating that GitHub is a subsidiary of Microsoft and is headquartered in San Francisco.,True,True,"chunk_007 | score=0.756 | GitHub is a software development platform headquartered in San Francisco. GitHub is a subsidiary of Microsoft.
+chunk_008 | score=0.211 | LinkedIn is a professional networking platform headquartered in Sunnyvale, California. LinkedIn is a subsidiary of Microsoft.
+chunk_020 | score=0.180 | Anthropic is an artificial intelligence company headquartered in San Francisco. Anthropic was founded in 2021 by Dario Amodei, Daniela Amodei, and other former OpenAI employees.
+chunk_001 | score=0.161 | OpenAI is an artificial intelligence company headquartered in San Francisco. OpenAI was founded in 2015 by Sam Altman, Greg Brockman, Ilya Sutskever, John Schulman, Wojciech Zaremba, and Elon Musk.","Anthropic --HEADQUARTERED_IN--> San Francisco (chunk_020, confidence=1.00, distance=0)
+Azure --SUBSIDIARY_OF--> Microsoft (chunk_002, confidence=1.00, distance=0)
+GitHub --SUBSIDIARY_OF--> Microsoft (chunk_007, confidence=1.00, distance=0)
+GitHub --HEADQUARTERED_IN--> San Francisco (chunk_007, confidence=1.00, distance=0)
+LinkedIn --SUBSIDIARY_OF--> Microsoft (chunk_008, confidence=1.00, distance=0)
+Microsoft --FOUNDED_IN--> 1975 (chunk_005, confidence=1.00, distance=0)
+Microsoft --PROVIDES_INFRASTRUCTURE_FOR--> AI workloads on Azure (chunk_029, confidence=1.00, distance=0)
+Microsoft --CREATED_PRODUCT--> Azure (chunk_006, confidence=1.00, distance=0)
+Microsoft --FOUNDED_BY--> Bill Gates (chunk_005, confidence=1.00, distance=0)
+Microsoft --ACQUIRED--> GitHub (chunk_006, confidence=1.00, distance=0)
+Microsoft --ACQUIRED--> LinkedIn (chunk_006, confidence=1.00, distance=0)
+Microsoft --CREATED_PRODUCT--> Microsoft Office (chunk_006, confidence=1.00, distance=0)
+Microsoft --PARTNERED_WITH--> NVIDIA (chunk_029, confidence=1.00, distance=0)
+Microsoft --INVESTED_IN--> OpenAI (chunk_002, confidence=1.00, distance=0)
+Microsoft --PROVIDES_INFRASTRUCTURE_FOR--> OpenAI (chunk_002, confidence=1.00, distance=0)
+Microsoft --FOUNDED_BY--> Paul Allen (chunk_005, confidence=1.00, distance=0)
+Microsoft --HEADQUARTERED_IN--> Redmond, Washington (chunk_005, confidence=1.00, distance=0)
+Microsoft --CREATED_PRODUCT--> Windows (chunk_006, confidence=1.00, distance=0)",Flat: Expected answer phrase appears in answer. Graph: Expected answer phrase appears in answer.
+q009,Which AI company is connected to Tesla through Elon Musk?,two-hop,OpenAI,The AI company connected to Tesla through Elon Musk is OpenAI.,"The AI company connected to Tesla through Elon Musk is OpenAI. The supporting relationships are that Elon Musk founded OpenAI and invested in Tesla, establishing a connection between the two companies.",True,True,"chunk_028 | score=0.370 | Elon Musk co-founded OpenAI and later led Tesla. This connects OpenAI and Tesla through a shared person entity.
+chunk_027 | score=0.322 | Elon Musk invested in Tesla in 2004 and later became chief executive officer of Tesla. Tesla created the Model S, Model 3, Model X, and Model Y.
+chunk_001 | score=0.207 | OpenAI is an artificial intelligence company headquartered in San Francisco. OpenAI was founded in 2015 by Sam Altman, Greg Brockman, Ilya Sutskever, John Schulman, Wojciech Zaremba, and Elon Musk.
+chunk_026 | score=0.167 | Tesla is an electric vehicle and energy company headquartered in Austin, Texas. Tesla was founded in 2003 by Martin Eberhard and Marc Tarpenning.","Elon Musk --FOUNDED_BY--> OpenAI (chunk_028, confidence=1.00, distance=0)
+Elon Musk --INVESTED_IN--> Tesla (chunk_027, confidence=1.00, distance=0)
+Elon Musk --LED_BY--> Tesla (chunk_027, confidence=1.00, distance=0)
+OpenAI --FOUNDED_BY--> Elon Musk (chunk_001, confidence=1.00, distance=0)
+Tesla --FOUNDED_IN--> 2003 (chunk_026, confidence=1.00, distance=0)
+Tesla --FOUNDED_IN--> 2004 (chunk_027, confidence=1.00, distance=0)
+Tesla --HEADQUARTERED_IN--> Austin, Texas (chunk_026, confidence=1.00, distance=0)
+Tesla --FOUNDED_BY--> Marc Tarpenning (chunk_026, confidence=1.00, distance=0)
+Tesla --FOUNDED_BY--> Martin Eberhard (chunk_026, confidence=1.00, distance=0)
+Tesla --CREATED_PRODUCT--> Model 3 (chunk_027, confidence=1.00, distance=0)
+Tesla --CREATED_PRODUCT--> Model S (chunk_027, confidence=1.00, distance=0)
+Tesla --CREATED_PRODUCT--> Model X (chunk_027, confidence=1.00, distance=0)
+Tesla --CREATED_PRODUCT--> Model Y (chunk_027, confidence=1.00, distance=0)
+Greg Brockman --FOUNDED_BY--> OpenAI (chunk_004, confidence=1.00, distance=1)
+Greg Brockman --LED_BY--> OpenAI (chunk_004, confidence=1.00, distance=1)
+Meta --FOUNDED_IN--> 2004 (chunk_014, confidence=1.00, distance=1)
+Microsoft --INVESTED_IN--> OpenAI (chunk_002, confidence=1.00, distance=1)
+Microsoft --PROVIDES_INFRASTRUCTURE_FOR--> OpenAI (chunk_002, confidence=1.00, distance=1)",Flat: Expected answer phrase appears in answer. Graph: Expected answer phrase appears in answer.
+q010,Which company invested in Anthropic and provides cloud infrastructure through Amazon Web Services?,two-hop,Amazon,The company that invested in Anthropic and provides cloud infrastructure through Amazon Web Services is Amazon.,"The company that invested in Anthropic and provides cloud infrastructure through Amazon Web Services is Amazon. This is supported by the relationships indicating that Amazon invested in Anthropic and created Amazon Web Services, which provides infrastructure for AI workloads.",True,True,"chunk_021 | score=0.674 | Anthropic created Claude as an AI assistant product. Amazon invested in Anthropic and provides cloud infrastructure for Anthropic through Amazon Web Services.
+chunk_002 | score=0.315 | Microsoft invested in OpenAI and provides cloud infrastructure for OpenAI through Azure. Azure is Microsoft's cloud computing platform.
+chunk_013 | score=0.234 | Google Cloud is a cloud computing platform developed by Google. Google Cloud competes with Microsoft Azure and Amazon Web Services.
+chunk_023 | score=0.228 | Amazon created Amazon Web Services as a cloud computing platform. Amazon acquired Twitch in 2014 and acquired Whole Foods Market in 2017.","Amazon --FOUNDED_IN--> 1994 (chunk_022, confidence=1.00, distance=0)
+Amazon --PROVIDES_INFRASTRUCTURE_FOR--> AI workloads on Amazon Web Services (chunk_029, confidence=1.00, distance=0)
+Amazon --CREATED_PRODUCT--> Amazon Web Services (chunk_023, confidence=1.00, distance=0)
+Amazon --INVESTED_IN--> Anthropic (chunk_021, confidence=1.00, distance=0)
+Amazon --PROVIDES_INFRASTRUCTURE_FOR--> Anthropic (chunk_021, confidence=1.00, distance=0)
+Amazon --FOUNDED_BY--> Jeff Bezos (chunk_022, confidence=1.00, distance=0)
+Amazon --PARTNERED_WITH--> NVIDIA (chunk_029, confidence=1.00, distance=0)
+Amazon --HEADQUARTERED_IN--> Seattle, Washington (chunk_022, confidence=1.00, distance=0)
+Amazon --ACQUIRED--> Twitch (chunk_023, confidence=1.00, distance=0)
+Amazon --ACQUIRED--> Whole Foods Market (chunk_023, confidence=1.00, distance=0)
+Anthropic --FOUNDED_IN--> 2021 (chunk_020, confidence=1.00, distance=0)
+Anthropic --CREATED_PRODUCT--> Claude (chunk_021, confidence=1.00, distance=0)
+Anthropic --FOUNDED_BY--> Daniela Amodei (chunk_020, confidence=1.00, distance=0)
+Anthropic --FOUNDED_BY--> Dario Amodei (chunk_020, confidence=1.00, distance=0)
+Anthropic --HEADQUARTERED_IN--> San Francisco (chunk_020, confidence=1.00, distance=0)
+Anthropic --FOUNDED_BY--> other former OpenAI employees (chunk_020, confidence=1.00, distance=0)
+Google Cloud --COMPETES_WITH--> Amazon Web Services (chunk_013, confidence=1.00, distance=0)
+NVIDIA --PARTNERED_WITH--> Amazon (chunk_025, confidence=1.00, distance=0)",Flat: Expected answer phrase appears in answer. Graph: Expected answer phrase appears in answer.
+q011,Compare OpenAI and Anthropic: what AI assistant product did each create?,comparison,"OpenAI created ChatGPT, while Anthropic created Claude.","OpenAI created ChatGPT as its AI assistant product, while Anthropic created Claude as its AI assistant product.","OpenAI created the product ChatGPT, while Anthropic created the product Claude. 
+
+Key supporting relationships:
+- OpenAI is founded by Elon Musk and Greg Brockman and developed ChatGPT.
+- Anthropic, founded by Daniela Amodei, Dario Amodei, and other former OpenAI employees, created Claude.",True,True,"chunk_021 | score=0.517 | Anthropic created Claude as an AI assistant product. Amazon invested in Anthropic and provides cloud infrastructure for Anthropic through Amazon Web Services.
+chunk_020 | score=0.168 | Anthropic is an artificial intelligence company headquartered in San Francisco. Anthropic was founded in 2021 by Dario Amodei, Daniela Amodei, and other former OpenAI employees.
+chunk_003 | score=0.166 | OpenAI created ChatGPT as a conversational AI product. OpenAI also developed GPT-4 as a large language model for reasoning and generation.
+chunk_004 | score=0.121 | Sam Altman is the chief executive officer of OpenAI. Greg Brockman is a co-founder of OpenAI and has served as president of OpenAI.","Amazon --INVESTED_IN--> Anthropic (chunk_021, confidence=1.00, distance=0)
+Amazon --PROVIDES_INFRASTRUCTURE_FOR--> Anthropic (chunk_021, confidence=1.00, distance=0)
+Anthropic --FOUNDED_IN--> 2021 (chunk_020, confidence=1.00, distance=0)
+Anthropic --CREATED_PRODUCT--> Claude (chunk_021, confidence=1.00, distance=0)
+Anthropic --FOUNDED_BY--> Daniela Amodei (chunk_020, confidence=1.00, distance=0)
+Anthropic --FOUNDED_BY--> Dario Amodei (chunk_020, confidence=1.00, distance=0)
+Anthropic --HEADQUARTERED_IN--> San Francisco (chunk_020, confidence=1.00, distance=0)
+Anthropic --FOUNDED_BY--> other former OpenAI employees (chunk_020, confidence=1.00, distance=0)
+Elon Musk --FOUNDED_BY--> OpenAI (chunk_028, confidence=1.00, distance=0)
+Greg Brockman --FOUNDED_BY--> OpenAI (chunk_004, confidence=1.00, distance=0)
+Greg Brockman --LED_BY--> OpenAI (chunk_004, confidence=1.00, distance=0)
+Microsoft --INVESTED_IN--> OpenAI (chunk_002, confidence=1.00, distance=0)
+Microsoft --PROVIDES_INFRASTRUCTURE_FOR--> OpenAI (chunk_002, confidence=1.00, distance=0)
+OpenAI --FOUNDED_IN--> 2015 (chunk_001, confidence=1.00, distance=0)
+OpenAI --CREATED_PRODUCT--> ChatGPT (chunk_003, confidence=1.00, distance=0)
+OpenAI --FOUNDED_BY--> Elon Musk (chunk_001, confidence=1.00, distance=0)
+OpenAI --DEVELOPED_BY--> GPT-4 (chunk_003, confidence=1.00, distance=0)
+OpenAI --FOUNDED_BY--> Greg Brockman (chunk_001, confidence=1.00, distance=0)","Flat: Matched required entities: OpenAI, ChatGPT, Anthropic, Claude. Graph: Matched required entities: OpenAI, ChatGPT, Anthropic, Claude."
+q012,"Compare Microsoft, Google, and Amazon: what cloud platform is associated with each?",comparison,"Microsoft has Azure, Google has Google Cloud, and Amazon has Amazon Web Services.","Microsoft is associated with Microsoft Azure, Google is associated with Google Cloud, and Amazon is associated with Amazon Web Services.","- **Microsoft**: Associated with **Azure** (as Azure is a subsidiary of Microsoft).
+- **Google**: Associated with **Google Cloud** (as Google created Google Cloud).
+- **Amazon**: Associated with **Amazon Web Services** (as Amazon created Amazon Web Services). 
+
+Key supporting relationships include Azure being a subsidiary of Microsoft, Google creating Google Cloud, and Amazon creating Amazon Web Services.",True,True,"chunk_013 | score=0.373 | Google Cloud is a cloud computing platform developed by Google. Google Cloud competes with Microsoft Azure and Amazon Web Services.
+chunk_025 | score=0.334 | NVIDIA created CUDA and develops GPUs used for artificial intelligence workloads. NVIDIA partners with cloud providers including Microsoft, Google, and Amazon.
+chunk_030 | score=0.269 | Google partners with NVIDIA for AI infrastructure and GPU acceleration on Google Cloud. These cloud partnerships connect NVIDIA with Microsoft Azure, Google Cloud, and Amazon Web Services.
+chunk_010 | score=0.222 | Alphabet is the parent company of Google. Google created Google Search, Gmail, Android, and Google Cloud.","Alphabet --PARENT_COMPANY_OF--> Google (chunk_010, confidence=1.00, distance=0)
+Amazon --FOUNDED_IN--> 1994 (chunk_022, confidence=1.00, distance=0)
+Amazon --PROVIDES_INFRASTRUCTURE_FOR--> AI workloads on Amazon Web Services (chunk_029, confidence=1.00, distance=0)
+Amazon --CREATED_PRODUCT--> Amazon Web Services (chunk_023, confidence=1.00, distance=0)
+Amazon --INVESTED_IN--> Anthropic (chunk_021, confidence=1.00, distance=0)
+Amazon --PROVIDES_INFRASTRUCTURE_FOR--> Anthropic (chunk_021, confidence=1.00, distance=0)
+Amazon --FOUNDED_BY--> Jeff Bezos (chunk_022, confidence=1.00, distance=0)
+Amazon --PARTNERED_WITH--> NVIDIA (chunk_029, confidence=1.00, distance=0)
+Amazon --HEADQUARTERED_IN--> Seattle, Washington (chunk_022, confidence=1.00, distance=0)
+Amazon --ACQUIRED--> Twitch (chunk_023, confidence=1.00, distance=0)
+Amazon --ACQUIRED--> Whole Foods Market (chunk_023, confidence=1.00, distance=0)
+Azure --SUBSIDIARY_OF--> Microsoft (chunk_002, confidence=1.00, distance=0)
+GitHub --SUBSIDIARY_OF--> Microsoft (chunk_007, confidence=1.00, distance=0)
+Google --FOUNDED_IN--> 1998 (chunk_009, confidence=1.00, distance=0)
+Google --CREATED_PRODUCT--> Android (chunk_010, confidence=1.00, distance=0)
+Google --ACQUIRED--> DeepMind (chunk_011, confidence=1.00, distance=0)
+Google --CREATED_PRODUCT--> Gmail (chunk_010, confidence=1.00, distance=0)
+Google --CREATED_PRODUCT--> Google Cloud (chunk_010, confidence=1.00, distance=0)","Flat: Matched required entities: Microsoft, Azure, Google, Google Cloud, Amazon, Amazon Web Services. Graph: Matched required entities: Microsoft, Azure, Google, Google Cloud, Amazon, Amazon Web Services."
+q013,Compare Meta's acquisitions of Instagram and WhatsApp: which company acquired both and in what years?,comparison,Meta acquired Instagram in 2012 and WhatsApp in 2014.,"Meta acquired both Instagram and WhatsApp. Instagram was acquired in 2012, and WhatsApp was acquired in 2014.","Meta acquired both Instagram and WhatsApp. The specific years of these acquisitions are not provided in the knowledge graph triples. However, it is confirmed that Meta is the company that acquired both platforms. The key supporting relationships are:
+- Meta --ACQUIRED--> Instagram
+- Meta --ACQUIRED--> WhatsApp",True,False,"chunk_016 | score=0.385 | Meta acquired WhatsApp in 2014. WhatsApp is a messaging product used for consumer communication.
+chunk_015 | score=0.350 | Meta acquired Instagram in 2012. Instagram is a social media product focused on photo and video sharing.
+chunk_014 | score=0.127 | Meta is a social technology company headquartered in Menlo Park, California. Meta was founded as Facebook in 2004 by Mark Zuckerberg, Eduardo Saverin, Andrew McCollum, Dustin Moskovitz, and Chris Hughes.
+chunk_017 | score=0.127 | Mark Zuckerberg is the chief executive officer of Meta. Meta created Facebook and develops AI systems for social media and advertising.","Instagram --CREATED_PRODUCT--> social media product focused on photo and video sharing (chunk_015, confidence=1.00, distance=0)
+Mark Zuckerberg --LED_BY--> Meta (chunk_017, confidence=1.00, distance=0)
+Meta --FOUNDED_IN--> 2004 (chunk_014, confidence=1.00, distance=0)
+Meta --DEVELOPED_BY--> AI systems for social media and advertising (chunk_017, confidence=1.00, distance=0)
+Meta --FOUNDED_BY--> Andrew McCollum (chunk_014, confidence=1.00, distance=0)
+Meta --FOUNDED_BY--> Chris Hughes (chunk_014, confidence=1.00, distance=0)
+Meta --FOUNDED_BY--> Dustin Moskovitz (chunk_014, confidence=1.00, distance=0)
+Meta --FOUNDED_BY--> Eduardo Saverin (chunk_014, confidence=1.00, distance=0)
+Meta --ACQUIRED--> Facebook (chunk_014, confidence=1.00, distance=0)
+Meta --CREATED_PRODUCT--> Facebook (chunk_017, confidence=1.00, distance=0)
+Meta --ACQUIRED--> Instagram (chunk_015, confidence=1.00, distance=0)
+Meta --FOUNDED_BY--> Mark Zuckerberg (chunk_014, confidence=1.00, distance=0)
+Meta --HEADQUARTERED_IN--> Menlo Park, California (chunk_014, confidence=1.00, distance=0)
+Meta --ACQUIRED--> WhatsApp (chunk_016, confidence=1.00, distance=0)
+WhatsApp --CREATED_PRODUCT--> messaging product (chunk_016, confidence=1.00, distance=0)
+Tesla --FOUNDED_IN--> 2004 (chunk_027, confidence=1.00, distance=1)","Flat: Matched required entities: Meta, Instagram, WhatsApp, 2012, 2014. Graph: Matched required entities: Meta, Instagram, WhatsApp."
+q014,"Compare Google and DeepMind: which one acquired the other, and which one developed AlphaGo?",comparison,"Google acquired DeepMind, and DeepMind developed AlphaGo.","Google acquired DeepMind in 2014, and DeepMind developed AlphaGo.","Google acquired DeepMind in 2014. DeepMind developed AlphaGo. 
+
+Key supporting relationships:
+- Google --ACQUIRED--> DeepMind
+- DeepMind --DEVELOPED_BY--> AlphaGo",True,True,"chunk_012 | score=0.373 | DeepMind developed AlphaGo and AlphaFold. AlphaFold is a product and research system for protein structure prediction.
+chunk_011 | score=0.288 | Google acquired DeepMind in 2014. DeepMind is an artificial intelligence research company headquartered in London.
+chunk_013 | score=0.192 | Google Cloud is a cloud computing platform developed by Google. Google Cloud competes with Microsoft Azure and Amazon Web Services.
+chunk_010 | score=0.175 | Alphabet is the parent company of Google. Google created Google Search, Gmail, Android, and Google Cloud.","Alphabet --PARENT_COMPANY_OF--> Google (chunk_010, confidence=1.00, distance=0)
+DeepMind --ACQUIRED_IN--> 2014 (chunk_011, confidence=1.00, distance=0)
+DeepMind --DEVELOPED_BY--> AlphaFold (chunk_012, confidence=1.00, distance=0)
+DeepMind --DEVELOPED_BY--> AlphaGo (chunk_012, confidence=1.00, distance=0)
+DeepMind --HEADQUARTERED_IN--> London (chunk_011, confidence=1.00, distance=0)
+Google --FOUNDED_IN--> 1998 (chunk_009, confidence=1.00, distance=0)
+Google --CREATED_PRODUCT--> Android (chunk_010, confidence=1.00, distance=0)
+Google --ACQUIRED--> DeepMind (chunk_011, confidence=1.00, distance=0)
+Google --CREATED_PRODUCT--> Gmail (chunk_010, confidence=1.00, distance=0)
+Google --CREATED_PRODUCT--> Google Cloud (chunk_010, confidence=1.00, distance=0)
+Google --CREATED_PRODUCT--> Google Search (chunk_010, confidence=1.00, distance=0)
+Google --FOUNDED_BY--> Larry Page (chunk_009, confidence=1.00, distance=0)
+Google --HEADQUARTERED_IN--> Mountain View, California (chunk_009, confidence=1.00, distance=0)
+Google --PARTNERED_WITH--> NVIDIA (chunk_030, confidence=1.00, distance=0)
+Google --FOUNDED_BY--> Sergey Brin (chunk_009, confidence=1.00, distance=0)
+Google Cloud --DEVELOPED_BY--> Google (chunk_013, confidence=1.00, distance=0)
+NVIDIA --PARTNERED_WITH--> Google (chunk_025, confidence=1.00, distance=0)
+AlphaFold --CREATED_PRODUCT--> protein structure prediction (chunk_012, confidence=1.00, distance=1)","Flat: Matched required entities: Google, DeepMind, AlphaGo. Graph: Matched required entities: Google, DeepMind, AlphaGo."
+q015,Compare Apple and Tesla: what major hardware products are associated with each?,comparison,"Apple is associated with iPhone, iPad, Mac, and Apple Vision Pro, while Tesla is associated with Model S, Model 3, Model X, and Model Y.","Apple is associated with major hardware products such as the iPhone, iPad, Mac, and Apple Vision Pro. Tesla, on the other hand, is known for its electric vehicles, including the Model S, Model 3, Model X, and Model Y.","Apple is associated with major hardware products such as the Apple Vision Pro, Mac, iPad, and iPhone. Tesla, on the other hand, is primarily known for the Model 3. 
+
+Key supporting relationships:
+- Apple created multiple products (Apple Vision Pro, Mac, iPad, iPhone).
+- Tesla created the Model 3.",True,False,"chunk_019 | score=0.377 | Apple created the iPhone, iPad, Mac, and Apple Vision Pro. Apple acquired Beats Electronics in 2014.
+chunk_018 | score=0.249 | Apple is a technology company headquartered in Cupertino, California. Apple was founded in 1976 by Steve Jobs, Steve Wozniak, and Ronald Wayne.
+chunk_027 | score=0.247 | Elon Musk invested in Tesla in 2004 and later became chief executive officer of Tesla. Tesla created the Model S, Model 3, Model X, and Model Y.
+chunk_028 | score=0.227 | Elon Musk co-founded OpenAI and later led Tesla. This connects OpenAI and Tesla through a shared person entity.","Apple --FOUNDED_IN--> 1976 (chunk_018, confidence=1.00, distance=0)
+Apple --CREATED_PRODUCT--> Apple Vision Pro (chunk_019, confidence=1.00, distance=0)
+Apple --ACQUIRED--> Beats Electronics (chunk_019, confidence=1.00, distance=0)
+Apple --HEADQUARTERED_IN--> Cupertino, California (chunk_018, confidence=1.00, distance=0)
+Apple --CREATED_PRODUCT--> Mac (chunk_019, confidence=1.00, distance=0)
+Apple --FOUNDED_BY--> Ronald Wayne (chunk_018, confidence=1.00, distance=0)
+Apple --FOUNDED_BY--> Steve Jobs (chunk_018, confidence=1.00, distance=0)
+Apple --FOUNDED_BY--> Steve Wozniak (chunk_018, confidence=1.00, distance=0)
+Apple --CREATED_PRODUCT--> iPad (chunk_019, confidence=1.00, distance=0)
+Apple --CREATED_PRODUCT--> iPhone (chunk_019, confidence=1.00, distance=0)
+Elon Musk --INVESTED_IN--> Tesla (chunk_027, confidence=1.00, distance=0)
+Elon Musk --LED_BY--> Tesla (chunk_027, confidence=1.00, distance=0)
+Tesla --FOUNDED_IN--> 2003 (chunk_026, confidence=1.00, distance=0)
+Tesla --FOUNDED_IN--> 2004 (chunk_027, confidence=1.00, distance=0)
+Tesla --HEADQUARTERED_IN--> Austin, Texas (chunk_026, confidence=1.00, distance=0)
+Tesla --FOUNDED_BY--> Marc Tarpenning (chunk_026, confidence=1.00, distance=0)
+Tesla --FOUNDED_BY--> Martin Eberhard (chunk_026, confidence=1.00, distance=0)
+Tesla --CREATED_PRODUCT--> Model 3 (chunk_027, confidence=1.00, distance=0)","Flat: Matched required entities: Apple, Tesla, iPhone, Model S, Model 3, Model X, Model Y. Graph: Matched required entities: Apple, Tesla, iPhone, Model 3."
+q016,Did Google acquire WhatsApp?,adversarial,No. Meta acquired WhatsApp in 2014.,The answer is not supported by the retrieved chunks.,"No, Google did not acquire WhatsApp. Instead, WhatsApp was acquired by Meta. This is supported by the relationship ""Meta --ACQUIRED--> WhatsApp.""",False,True,"chunk_016 | score=0.385 | Meta acquired WhatsApp in 2014. WhatsApp is a messaging product used for consumer communication.
+chunk_010 | score=0.304 | Alphabet is the parent company of Google. Google created Google Search, Gmail, Android, and Google Cloud.
+chunk_013 | score=0.222 | Google Cloud is a cloud computing platform developed by Google. Google Cloud competes with Microsoft Azure and Amazon Web Services.
+chunk_030 | score=0.185 | Google partners with NVIDIA for AI infrastructure and GPU acceleration on Google Cloud. These cloud partnerships connect NVIDIA with Microsoft Azure, Google Cloud, and Amazon Web Services.","Alphabet --PARENT_COMPANY_OF--> Google (chunk_010, confidence=1.00, distance=0)
+Google --FOUNDED_IN--> 1998 (chunk_009, confidence=1.00, distance=0)
+Google --CREATED_PRODUCT--> Android (chunk_010, confidence=1.00, distance=0)
+Google --ACQUIRED--> DeepMind (chunk_011, confidence=1.00, distance=0)
+Google --CREATED_PRODUCT--> Gmail (chunk_010, confidence=1.00, distance=0)
+Google --CREATED_PRODUCT--> Google Cloud (chunk_010, confidence=1.00, distance=0)
+Google --CREATED_PRODUCT--> Google Search (chunk_010, confidence=1.00, distance=0)
+Google --FOUNDED_BY--> Larry Page (chunk_009, confidence=1.00, distance=0)
+Google --HEADQUARTERED_IN--> Mountain View, California (chunk_009, confidence=1.00, distance=0)
+Google --PARTNERED_WITH--> NVIDIA (chunk_030, confidence=1.00, distance=0)
+Google --FOUNDED_BY--> Sergey Brin (chunk_009, confidence=1.00, distance=0)
+Google Cloud --DEVELOPED_BY--> Google (chunk_013, confidence=1.00, distance=0)
+Meta --ACQUIRED--> WhatsApp (chunk_016, confidence=1.00, distance=0)
+NVIDIA --PARTNERED_WITH--> Google (chunk_025, confidence=1.00, distance=0)
+WhatsApp --CREATED_PRODUCT--> messaging product (chunk_016, confidence=1.00, distance=0)
+Amazon --PARTNERED_WITH--> NVIDIA (chunk_029, confidence=1.00, distance=1)
+DeepMind --ACQUIRED_IN--> 2014 (chunk_011, confidence=1.00, distance=1)
+DeepMind --DEVELOPED_BY--> AlphaFold (chunk_012, confidence=1.00, distance=1)","Flat: Expected a negative answer, but answer did not start with No. Graph: Matched required entities: Google, Meta, WhatsApp."
+q017,Is GitHub a subsidiary of Google?,adversarial,No. GitHub is a subsidiary of Microsoft.,The answer is not supported by the retrieved chunks.,"No, GitHub is not a subsidiary of Google. GitHub is a subsidiary of Microsoft, as indicated by the relationship ""GitHub --SUBSIDIARY_OF--> Microsoft.""",False,True,"chunk_007 | score=0.482 | GitHub is a software development platform headquartered in San Francisco. GitHub is a subsidiary of Microsoft.
+chunk_010 | score=0.209 | Alphabet is the parent company of Google. Google created Google Search, Gmail, Android, and Google Cloud.
+chunk_013 | score=0.153 | Google Cloud is a cloud computing platform developed by Google. Google Cloud competes with Microsoft Azure and Amazon Web Services.
+chunk_030 | score=0.128 | Google partners with NVIDIA for AI infrastructure and GPU acceleration on Google Cloud. These cloud partnerships connect NVIDIA with Microsoft Azure, Google Cloud, and Amazon Web Services.","Alphabet --PARENT_COMPANY_OF--> Google (chunk_010, confidence=1.00, distance=0)
+GitHub --ACQUIRED_IN--> 2018 (chunk_006, confidence=1.00, distance=0)
+GitHub --SUBSIDIARY_OF--> Microsoft (chunk_007, confidence=1.00, distance=0)
+GitHub --HEADQUARTERED_IN--> San Francisco (chunk_007, confidence=1.00, distance=0)
+Google --FOUNDED_IN--> 1998 (chunk_009, confidence=1.00, distance=0)
+Google --CREATED_PRODUCT--> Android (chunk_010, confidence=1.00, distance=0)
+Google --ACQUIRED--> DeepMind (chunk_011, confidence=1.00, distance=0)
+Google --CREATED_PRODUCT--> Gmail (chunk_010, confidence=1.00, distance=0)
+Google --CREATED_PRODUCT--> Google Cloud (chunk_010, confidence=1.00, distance=0)
+Google --CREATED_PRODUCT--> Google Search (chunk_010, confidence=1.00, distance=0)
+Google --FOUNDED_BY--> Larry Page (chunk_009, confidence=1.00, distance=0)
+Google --HEADQUARTERED_IN--> Mountain View, California (chunk_009, confidence=1.00, distance=0)
+Google --PARTNERED_WITH--> NVIDIA (chunk_030, confidence=1.00, distance=0)
+Google --FOUNDED_BY--> Sergey Brin (chunk_009, confidence=1.00, distance=0)
+Google Cloud --DEVELOPED_BY--> Google (chunk_013, confidence=1.00, distance=0)
+Microsoft --ACQUIRED--> GitHub (chunk_006, confidence=1.00, distance=0)
+NVIDIA --PARTNERED_WITH--> Google (chunk_025, confidence=1.00, distance=0)
+Amazon --PARTNERED_WITH--> NVIDIA (chunk_029, confidence=1.00, distance=1)","Flat: Expected a negative answer, but answer did not start with No. Graph: Matched required entities: GitHub, Google, Microsoft."
+q018,Did Anthropic create ChatGPT?,adversarial,"No. OpenAI created ChatGPT, while Anthropic created Claude.","No, Anthropic did not create ChatGPT; OpenAI created ChatGPT.","No, Anthropic did not create ChatGPT. ChatGPT was created by OpenAI, while Anthropic created the product Claude. The key supporting relationships are that OpenAI is the entity that created ChatGPT, and Anthropic is a separate organization that created Claude.",True,True,"chunk_021 | score=0.330 | Anthropic created Claude as an AI assistant product. Amazon invested in Anthropic and provides cloud infrastructure for Anthropic through Amazon Web Services.
+chunk_020 | score=0.225 | Anthropic is an artificial intelligence company headquartered in San Francisco. Anthropic was founded in 2021 by Dario Amodei, Daniela Amodei, and other former OpenAI employees.
+chunk_003 | score=0.151 | OpenAI created ChatGPT as a conversational AI product. OpenAI also developed GPT-4 as a large language model for reasoning and generation.","Amazon --INVESTED_IN--> Anthropic (chunk_021, confidence=1.00, distance=0)
+Amazon --PROVIDES_INFRASTRUCTURE_FOR--> Anthropic (chunk_021, confidence=1.00, distance=0)
+Anthropic --FOUNDED_IN--> 2021 (chunk_020, confidence=1.00, distance=0)
+Anthropic --CREATED_PRODUCT--> Claude (chunk_021, confidence=1.00, distance=0)
+Anthropic --FOUNDED_BY--> Daniela Amodei (chunk_020, confidence=1.00, distance=0)
+Anthropic --FOUNDED_BY--> Dario Amodei (chunk_020, confidence=1.00, distance=0)
+Anthropic --HEADQUARTERED_IN--> San Francisco (chunk_020, confidence=1.00, distance=0)
+Anthropic --FOUNDED_BY--> other former OpenAI employees (chunk_020, confidence=1.00, distance=0)
+OpenAI --CREATED_PRODUCT--> ChatGPT (chunk_003, confidence=1.00, distance=0)
+Amazon --FOUNDED_IN--> 1994 (chunk_022, confidence=1.00, distance=1)
+Amazon --PROVIDES_INFRASTRUCTURE_FOR--> AI workloads on Amazon Web Services (chunk_029, confidence=1.00, distance=1)
+Amazon --CREATED_PRODUCT--> Amazon Web Services (chunk_023, confidence=1.00, distance=1)
+Amazon --FOUNDED_BY--> Jeff Bezos (chunk_022, confidence=1.00, distance=1)
+Amazon --PARTNERED_WITH--> NVIDIA (chunk_029, confidence=1.00, distance=1)
+Amazon --HEADQUARTERED_IN--> Seattle, Washington (chunk_022, confidence=1.00, distance=1)
+Amazon --ACQUIRED--> Twitch (chunk_023, confidence=1.00, distance=1)
+Amazon --ACQUIRED--> Whole Foods Market (chunk_023, confidence=1.00, distance=1)
+Elon Musk --FOUNDED_BY--> OpenAI (chunk_028, confidence=1.00, distance=1)","Flat: Matched required entities: Anthropic, ChatGPT, OpenAI, Claude. Graph: Matched required entities: Anthropic, ChatGPT, OpenAI, Claude."
+q019,Was Tesla founded by Elon Musk?,adversarial,No. Tesla was founded by Martin Eberhard and Marc Tarpenning; Elon Musk invested later and became CEO.,"No, Tesla was not founded by Elon Musk. It was founded in 2003 by Martin Eberhard and Marc Tarpenning. Elon Musk invested in Tesla in 2004 and later became the CEO.","No, Tesla was not founded by Elon Musk. Tesla was founded by Marc Tarpenning and Martin Eberhard. Elon Musk invested in and led the company, but he did not found it.",True,True,"chunk_028 | score=0.375 | Elon Musk co-founded OpenAI and later led Tesla. This connects OpenAI and Tesla through a shared person entity.
+chunk_027 | score=0.300 | Elon Musk invested in Tesla in 2004 and later became chief executive officer of Tesla. Tesla created the Model S, Model 3, Model X, and Model Y.
+chunk_026 | score=0.255 | Tesla is an electric vehicle and energy company headquartered in Austin, Texas. Tesla was founded in 2003 by Martin Eberhard and Marc Tarpenning.
+chunk_001 | score=0.195 | OpenAI is an artificial intelligence company headquartered in San Francisco. OpenAI was founded in 2015 by Sam Altman, Greg Brockman, Ilya Sutskever, John Schulman, Wojciech Zaremba, and Elon Musk.","Elon Musk --FOUNDED_BY--> OpenAI (chunk_028, confidence=1.00, distance=0)
+Elon Musk --INVESTED_IN--> Tesla (chunk_027, confidence=1.00, distance=0)
+Elon Musk --LED_BY--> Tesla (chunk_027, confidence=1.00, distance=0)
+OpenAI --FOUNDED_BY--> Elon Musk (chunk_001, confidence=1.00, distance=0)
+Tesla --FOUNDED_IN--> 2003 (chunk_026, confidence=1.00, distance=0)
+Tesla --FOUNDED_IN--> 2004 (chunk_027, confidence=1.00, distance=0)
+Tesla --HEADQUARTERED_IN--> Austin, Texas (chunk_026, confidence=1.00, distance=0)
+Tesla --FOUNDED_BY--> Marc Tarpenning (chunk_026, confidence=1.00, distance=0)
+Tesla --FOUNDED_BY--> Martin Eberhard (chunk_026, confidence=1.00, distance=0)
+Tesla --CREATED_PRODUCT--> Model 3 (chunk_027, confidence=1.00, distance=0)
+Tesla --CREATED_PRODUCT--> Model S (chunk_027, confidence=1.00, distance=0)
+Tesla --CREATED_PRODUCT--> Model X (chunk_027, confidence=1.00, distance=0)
+Tesla --CREATED_PRODUCT--> Model Y (chunk_027, confidence=1.00, distance=0)
+Greg Brockman --FOUNDED_BY--> OpenAI (chunk_004, confidence=1.00, distance=1)
+Greg Brockman --LED_BY--> OpenAI (chunk_004, confidence=1.00, distance=1)
+Meta --FOUNDED_IN--> 2004 (chunk_014, confidence=1.00, distance=1)
+Microsoft --INVESTED_IN--> OpenAI (chunk_002, confidence=1.00, distance=1)
+Microsoft --PROVIDES_INFRASTRUCTURE_FOR--> OpenAI (chunk_002, confidence=1.00, distance=1)","Flat: Matched required entities: Tesla, Elon Musk, Martin Eberhard, Marc Tarpenning. Graph: Matched required entities: Tesla, Elon Musk, Martin Eberhard, Marc Tarpenning."
+q020,Does Amazon Web Services belong to Microsoft?,adversarial,No. Amazon Web Services was created by Amazon; Microsoft created Azure.,The answer is not supported by the retrieved chunks.,"No, Amazon Web Services does not belong to Microsoft. Amazon Web Services is created by Amazon, which is a separate entity from Microsoft. The key supporting relationships are that Amazon created Amazon Web Services and Microsoft has its own product, Azure, which competes with Amazon Web Services.",False,True,"chunk_023 | score=0.378 | Amazon created Amazon Web Services as a cloud computing platform. Amazon acquired Twitch in 2014 and acquired Whole Foods Market in 2017.
+chunk_013 | score=0.331 | Google Cloud is a cloud computing platform developed by Google. Google Cloud competes with Microsoft Azure and Amazon Web Services.
+chunk_021 | score=0.314 | Anthropic created Claude as an AI assistant product. Amazon invested in Anthropic and provides cloud infrastructure for Anthropic through Amazon Web Services.
+chunk_030 | score=0.276 | Google partners with NVIDIA for AI infrastructure and GPU acceleration on Google Cloud. These cloud partnerships connect NVIDIA with Microsoft Azure, Google Cloud, and Amazon Web Services.","Amazon --FOUNDED_IN--> 1994 (chunk_022, confidence=1.00, distance=0)
+Amazon --PROVIDES_INFRASTRUCTURE_FOR--> AI workloads on Amazon Web Services (chunk_029, confidence=1.00, distance=0)
+Amazon --CREATED_PRODUCT--> Amazon Web Services (chunk_023, confidence=1.00, distance=0)
+Amazon --INVESTED_IN--> Anthropic (chunk_021, confidence=1.00, distance=0)
+Amazon --PROVIDES_INFRASTRUCTURE_FOR--> Anthropic (chunk_021, confidence=1.00, distance=0)
+Amazon --FOUNDED_BY--> Jeff Bezos (chunk_022, confidence=1.00, distance=0)
+Amazon --PARTNERED_WITH--> NVIDIA (chunk_029, confidence=1.00, distance=0)
+Amazon --HEADQUARTERED_IN--> Seattle, Washington (chunk_022, confidence=1.00, distance=0)
+Amazon --ACQUIRED--> Twitch (chunk_023, confidence=1.00, distance=0)
+Amazon --ACQUIRED--> Whole Foods Market (chunk_023, confidence=1.00, distance=0)
+Azure --SUBSIDIARY_OF--> Microsoft (chunk_002, confidence=1.00, distance=0)
+GitHub --SUBSIDIARY_OF--> Microsoft (chunk_007, confidence=1.00, distance=0)
+Google Cloud --COMPETES_WITH--> Amazon Web Services (chunk_013, confidence=1.00, distance=0)
+LinkedIn --SUBSIDIARY_OF--> Microsoft (chunk_008, confidence=1.00, distance=0)
+Microsoft --FOUNDED_IN--> 1975 (chunk_005, confidence=1.00, distance=0)
+Microsoft --PROVIDES_INFRASTRUCTURE_FOR--> AI workloads on Azure (chunk_029, confidence=1.00, distance=0)
+Microsoft --CREATED_PRODUCT--> Azure (chunk_006, confidence=1.00, distance=0)
+Microsoft --FOUNDED_BY--> Bill Gates (chunk_005, confidence=1.00, distance=0)","Flat: Expected a negative answer, but answer did not start with No. Graph: Matched required entities: Amazon Web Services, Amazon, Microsoft, Azure."

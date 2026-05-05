@@ -1,122 +1,173 @@
-# Day19 GraphRAG Knowledge Graph
+# Day 19 GraphRAG Knowledge Graph
 
-Lab Day 19 for building a small end-to-end GraphRAG system over a curated technology company corpus.
+**Học viên: Đặng Văn Minh**
+**MSHV: 2A202600027**
 
-## Goal
+Đây là bài nộp Lab Day 19: xây dựng một hệ thống GraphRAG end-to-end trên một corpus nhỏ về các công ty công nghệ.
 
-This project follows `docs/implementation_spec.md` and focuses on a simple, reproducible Python pipeline:
+Dự án minh họa các nội dung chính:
 
-- Curate a small Markdown corpus about technology companies.
-- Extract subject-relation-object triples.
-- Normalize triples and build a NetworkX knowledge graph.
-- Visualize the graph with Matplotlib.
-- Compare a simple Flat RAG baseline with GraphRAG on benchmark questions.
-- Track indexing cost and runtime.
+- Trích xuất bộ ba tri thức từ văn bản Markdown bằng LLM hoặc bằng chế độ deterministic/offline.
+- Chuẩn hóa entity/relation và khử trùng lặp triples.
+- Xây dựng knowledge graph bằng NetworkX.
+- Trực quan hóa graph bằng Matplotlib.
+- Xây dựng baseline Flat RAG bằng TF-IDF retrieval.
+- Xây dựng GraphRAG với entity matching và duyệt graph 2-hop.
+- So sánh Flat RAG và GraphRAG trên bộ benchmark 20 câu hỏi.
+- Ghi nhận runtime, token usage và chi phí ước tính khi indexing.
 
-## Project Structure
+## Lệnh Chấm Nhanh
 
-```text
-.
-├── data/
-│   ├── raw/          # Curated and optional crawled corpus files
-│   ├── processed/    # Chunks, extracted triples, normalized triples
-│   └── benchmark/    # Evaluation questions
-├── docs/             # Lab guide and implementation spec
-├── outputs/          # Generated graph images, benchmark CSV, cost report
-├── src/              # Python implementation
-├── .env.example
-├── requirements.txt
-└── README.md
-```
-
-## Setup
-
-```bash
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-cp .env.example .env
-```
-
-Then add your real `OPENAI_API_KEY` to `.env` if you want to run LLM extraction and answer generation.
-
-## Planned Commands
-
-The complete submission pipeline can be regenerated with one command:
+Từ thư mục gốc của repository, chạy:
 
 ```bash
 python main.py
 ```
 
-This runs deterministic offline extraction, graph construction, visualization, Flat RAG vs GraphRAG evaluation, and status reporting. Use OpenAI instead of the offline deterministic path when `OPENAI_API_KEY` is configured:
+Lệnh này sinh lại toàn bộ artifact cần nộp bằng chế độ deterministic/offline. Chế độ này không cần OpenAI API key, phù hợp để giảng viên chấm lại nhanh và ổn định.
+
+Nếu muốn chạy một lần thực nghiệm thật với LLM, tạo file `.env` và chạy:
 
 ```bash
+cp .env.example .env
+# sửa .env và điền OPENAI_API_KEY
 python main.py --openai
 ```
 
-Generated files under `outputs/` are ignored by Git except for `.gitkeep`. Force-add selected outputs when you want to include them in a submitted commit.
+`python main.py --openai` sẽ gọi OpenAI cho bước triple extraction và answer generation trong benchmark, nên có thể phát sinh chi phí API.
 
-## Current Extraction Command
+## Giảng Viên Nên Kiểm Tra Gì
 
-Phase 3 includes corpus chunking and raw triple extraction:
+Sau khi chạy `python main.py`, xem các file sau:
+
+- `outputs/submission_status.md`: trạng thái tổng thể của pipeline và checklist artifact.
+- `outputs/benchmark_report.md`: báo cáo benchmark dễ đọc, có phần GraphRAG cải thiện ở đâu so với Flat RAG.
+- `outputs/benchmark_results.csv`: bảng benchmark thô.
+- `outputs/knowledge_graph.png`: ảnh knowledge graph đã sinh.
+- `outputs/cost_report.json`: báo cáo runtime/token/cost của bước extraction.
+
+Kết quả kỳ vọng ở chế độ deterministic:
+
+```text
+Flat RAG accuracy: 15/20 = 75.0%
+GraphRAG accuracy: 20/20 = 100.0%
+```
+
+Điểm cải thiện chính nằm ở nhóm câu hỏi adversarial. Flat RAG thường retrieve được đoạn văn liên quan nhưng không kiểm tra quan hệ rõ ràng, trong khi GraphRAG dùng triples và graph traversal để trả lời chính xác hơn.
+
+## Cài Đặt
+
+```bash
+python -m venv .venv
+source .venv/bin/activate
+pip install -r requirements.txt
+```
+
+Nếu chạy chế độ OpenAI thật:
+
+```bash
+cp .env.example .env
+```
+
+Sau đó sửa `.env`:
+
+```bash
+OPENAI_API_KEY=your_real_key_here
+OPENAI_EXTRACTION_MODEL=gpt-4.1-mini
+OPENAI_ANSWER_MODEL=gpt-4.1-mini
+```
+
+## Cấu Trúc Repository
+
+```text
+.
+├── data/
+│   ├── raw/
+│   │   └── tech_company_corpus.md
+│   ├── processed/
+│   │   ├── chunks.json
+│   │   ├── triples.json
+│   │   └── normalized_triples.json
+│   └── benchmark/
+│       └── questions.json
+├── docs/
+│   ├── Lab_day_19.md
+│   └── implementation_spec.md
+├── outputs/
+│   ├── benchmark_report.md
+│   ├── benchmark_results.csv
+│   ├── cost_report.json
+│   ├── knowledge_graph.png
+│   ├── submission_status.json
+│   └── submission_status.md
+├── src/
+│   ├── config.py
+│   ├── corpus.py
+│   ├── evaluate.py
+│   ├── extract_triples.py
+│   ├── flat_rag.py
+│   ├── graph_rag.py
+│   ├── graph_store.py
+│   └── visualize.py
+├── main.py
+├── .env.example
+├── requirements.txt
+└── README.md
+```
+
+Các file sinh ra trong `outputs/` được ignore bởi Git theo mặc định. Nếu cần nộp kèm artifact đã sinh, có thể dùng `git add -f`.
+
+## Các Phase Trong Pipeline
+
+`main.py` chạy các phase sau và in rõ `input`, `process`, `expected output`, `status`, `duration` trên terminal:
+
+1. Chunking corpus và triple extraction.
+2. Chuẩn hóa triples và xây dựng NetworkX graph.
+3. Trực quan hóa knowledge graph.
+4. Chạy benchmark so sánh Flat RAG và GraphRAG.
+5. Sinh submission status report.
+
+## Các Lệnh Chạy Riêng Lẻ
+
+Chạy extraction deterministic:
 
 ```bash
 python -m src.extract_triples --offline
 ```
 
-Use `--offline` for deterministic lab data. Without `--offline`, the script will call OpenAI when `OPENAI_API_KEY` is set.
-
-Generated artifacts:
-
-- `data/processed/chunks.json`
-- `data/processed/triples.json`
-- `outputs/cost_report.json`
-
-Phase 4 normalizes triples and builds a NetworkX graph summary:
+Chuẩn hóa triples và in graph summary:
 
 ```bash
 python -m src.graph_store
 ```
 
-Generated artifact:
-
-- `data/processed/normalized_triples.json`
-
-Phase 5 visualizes the knowledge graph:
+Sinh ảnh graph:
 
 ```bash
 python -m src.visualize
 ```
 
-Use `--full` to render every node and edge. The default renders a focused graph that is easier to inspect in the lab report.
-
-Generated artifact:
-
-- `outputs/knowledge_graph.png`
-
-Phase 6 runs a simple Flat RAG baseline with TF-IDF retrieval:
+Hỏi Flat RAG:
 
 ```bash
 python -m src.flat_rag "Which company acquired Instagram?"
 ```
 
-Add `--openai` to use OpenAI for answer generation when `OPENAI_API_KEY` is configured.
-
-Phase 7 runs GraphRAG with entity matching and 2-hop graph traversal:
+Hỏi GraphRAG:
 
 ```bash
 python -m src.graph_rag "Which AI company is connected to Tesla through Elon Musk?"
 ```
 
-Add `--openai` to use OpenAI for final answer generation from graph triples.
-
-Phase 8 evaluates Flat RAG against GraphRAG on 20 benchmark questions:
+Chạy riêng benchmark:
 
 ```bash
 python -m src.evaluate
 ```
 
-Generated artifact:
+## Ghi Chú
 
-- `outputs/benchmark_results.csv`
-- `outputs/benchmark_report.md`
+- Chế độ deterministic giúp giảng viên chấm lại bài mà không cần API credential.
+- Chế độ OpenAI dùng để chạy thực nghiệm thật với LLM theo yêu cầu bài lab.
+- API key được đọc từ `.env` và không được commit.
+- Neo4j export là phần mở rộng optional trong spec, không bắt buộc cho main path dùng NetworkX.

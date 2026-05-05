@@ -1,0 +1,142 @@
+{
+  "overall_status": "OK",
+  "total_duration_seconds": 153.687,
+  "benchmark_summary": {
+    "total_questions": 20,
+    "flat_correct": 17,
+    "graph_correct": 18,
+    "flat_accuracy": "17/20 = 85.0%",
+    "graph_accuracy": "18/20 = 90.0%",
+    "graph_only_wins": 3
+  },
+  "steps": [
+    {
+      "name": "1. Corpus chunking and triple extraction",
+      "status": "OK",
+      "duration_seconds": 94.818,
+      "outputs": [
+        "/Users/dangminh/Desktop/Vin-PracticalAI/assignments/day19-GraphRAG/Day19-GraphRAG-KnowledgeGraph/data/processed/chunks.json",
+        "/Users/dangminh/Desktop/Vin-PracticalAI/assignments/day19-GraphRAG/Day19-GraphRAG-KnowledgeGraph/data/processed/triples.json",
+        "/Users/dangminh/Desktop/Vin-PracticalAI/assignments/day19-GraphRAG/Day19-GraphRAG-KnowledgeGraph/outputs/cost_report.json"
+      ],
+      "details": {
+        "num_chunks": 30,
+        "num_raw_triples": 125,
+        "extraction_mode": "openai",
+        "estimated_cost_usd": 0.003918
+      }
+    },
+    {
+      "name": "2. Triple normalization and NetworkX graph build",
+      "status": "OK",
+      "duration_seconds": 0.004,
+      "outputs": [
+        "/Users/dangminh/Desktop/Vin-PracticalAI/assignments/day19-GraphRAG/Day19-GraphRAG-KnowledgeGraph/data/processed/normalized_triples.json"
+      ],
+      "details": {
+        "num_nodes": 101,
+        "num_edges": 124,
+        "node_type_counts": {
+          "company": 11,
+          "entity": 12,
+          "location": 10,
+          "person": 26,
+          "product": 29,
+          "year": 13
+        },
+        "relation_counts": {
+          "ACQUIRED": 10,
+          "ACQUIRED_IN": 6,
+          "COMPETES_WITH": 2,
+          "CREATED_PRODUCT": 24,
+          "DEVELOPED_BY": 6,
+          "FOUNDED_BY": 29,
+          "FOUNDED_IN": 10,
+          "HEADQUARTERED_IN": 12,
+          "INVESTED_IN": 3,
+          "LED_BY": 4,
+          "PARENT_COMPANY_OF": 1,
+          "PARTNERED_WITH": 9,
+          "PROVIDES_INFRASTRUCTURE_FOR": 5,
+          "SUBSIDIARY_OF": 3
+        }
+      }
+    },
+    {
+      "name": "3. Knowledge graph visualization",
+      "status": "OK",
+      "duration_seconds": 1.24,
+      "outputs": [
+        "/Users/dangminh/Desktop/Vin-PracticalAI/assignments/day19-GraphRAG/Day19-GraphRAG-KnowledgeGraph/outputs/knowledge_graph.png"
+      ],
+      "details": {
+        "image_path": "/Users/dangminh/Desktop/Vin-PracticalAI/assignments/day19-GraphRAG/Day19-GraphRAG-KnowledgeGraph/outputs/knowledge_graph.png",
+        "image_size": "1.1 MB"
+      }
+    },
+    {
+      "name": "4. Flat RAG vs GraphRAG benchmark",
+      "status": "OK",
+      "duration_seconds": 57.625,
+      "outputs": [
+        "/Users/dangminh/Desktop/Vin-PracticalAI/assignments/day19-GraphRAG/Day19-GraphRAG-KnowledgeGraph/outputs/benchmark_results.csv",
+        "/Users/dangminh/Desktop/Vin-PracticalAI/assignments/day19-GraphRAG/Day19-GraphRAG-KnowledgeGraph/outputs/benchmark_report.md"
+      ],
+      "details": {
+        "total_questions": 20,
+        "flat_correct": 17,
+        "graph_correct": 18,
+        "flat_accuracy": "17/20 = 85.0%",
+        "graph_accuracy": "18/20 = 90.0%",
+        "graph_only_wins": 3
+      }
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "/Users/dangminh/Desktop/Vin-PracticalAI/assignments/day19-GraphRAG/Day19-GraphRAG-KnowledgeGraph/data/processed/chunks.json",
+      "exists": true,
+      "size": "10.5 KB"
+    },
+    {
+      "path": "/Users/dangminh/Desktop/Vin-PracticalAI/assignments/day19-GraphRAG/Day19-GraphRAG-KnowledgeGraph/data/processed/triples.json",
+      "exists": true,
+      "size": "18.9 KB"
+    },
+    {
+      "path": "/Users/dangminh/Desktop/Vin-PracticalAI/assignments/day19-GraphRAG/Day19-GraphRAG-KnowledgeGraph/data/processed/normalized_triples.json",
+      "exists": true,
+      "size": "18.7 KB"
+    },
+    {
+      "path": "/Users/dangminh/Desktop/Vin-PracticalAI/assignments/day19-GraphRAG/Day19-GraphRAG-KnowledgeGraph/outputs/cost_report.json",
+      "exists": true,
+      "size": "298 B"
+    },
+    {
+      "path": "/Users/dangminh/Desktop/Vin-PracticalAI/assignments/day19-GraphRAG/Day19-GraphRAG-KnowledgeGraph/outputs/knowledge_graph.png",
+      "exists": true,
+      "size": "1.1 MB"
+    },
+    {
+      "path": "/Users/dangminh/Desktop/Vin-PracticalAI/assignments/day19-GraphRAG/Day19-GraphRAG-KnowledgeGraph/outputs/benchmark_results.csv",
+      "exists": true,
+      "size": "50.1 KB"
+    },
+    {
+      "path": "/Users/dangminh/Desktop/Vin-PracticalAI/assignments/day19-GraphRAG/Day19-GraphRAG-KnowledgeGraph/outputs/benchmark_report.md",
+      "exists": true,
+      "size": "4.4 KB"
+    },
+    {
+      "path": "/Users/dangminh/Desktop/Vin-PracticalAI/assignments/day19-GraphRAG/Day19-GraphRAG-KnowledgeGraph/outputs/submission_status.md",
+      "exists": true,
+      "size": "2.1 KB"
+    },
+    {
+      "path": "/Users/dangminh/Desktop/Vin-PracticalAI/assignments/day19-GraphRAG/Day19-GraphRAG-KnowledgeGraph/outputs/submission_status.json",
+      "exists": true,
+      "size": "4.9 KB"
+    }
+  ]
+}
