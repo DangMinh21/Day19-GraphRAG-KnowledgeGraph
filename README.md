@@ -97,3 +97,11 @@ python -m src.flat_rag "Which company acquired Instagram?"
 ```
 
 Add `--openai` to use OpenAI for answer generation when `OPENAI_API_KEY` is configured.
+
+Phase 7 runs GraphRAG with entity matching and 2-hop graph traversal:
+
+```bash
+python -m src.graph_rag "Which AI company is connected to Tesla through Elon Musk?"
+```
+
+Add `--openai` to use OpenAI for final answer generation from graph triples.
